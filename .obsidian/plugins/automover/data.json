@@ -1,0 +1,29 @@
+{
+  "trigger_on_save": true,
+  "use_auto_mover": true,
+  "tag_rules": [
+    {
+      "tagSearchCriteria": "project",
+      "folder": "10_Projects"
+    },
+    {
+      "tagSearchCriteria": "resource",
+      "folder": "30_Resources"
+    },
+    {
+      "tagSearchCriteria": "area",
+      "folder": "20_Areas"
+    },
+    {
+      "tagSearchCriteria": "archive",
+      "folder": "40_Archives"
+    }
+  ],
+  "moving_rules": [],
+  "project_rules": [],
+  "exclusion_rules": [
+    {
+      "exclusionCriteria": "00_Meta"
+    }
+  ]
+}

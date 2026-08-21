@@ -1,0 +1,25 @@
+{
+  "rules": [
+    {
+      "folder": "10_Projects",
+      "tag": "#project",
+      "title": ""
+    },
+    {
+      "folder": "30_Resources",
+      "tag": "#resource",
+      "title": ""
+    },
+    {
+      "folder": "20_Areas",
+      "tag": "#area",
+      "title": ""
+    },
+    {
+      "folder": "40_Archives",
+      "tag": "#archive",
+      "title": ""
+    }
+  ],
+  "exclude": "00_Meta"
+}
