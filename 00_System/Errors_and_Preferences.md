@@ -24,3 +24,4 @@ status: active
 | :--- | :--- | :--- | :--- |
 | 2026-08-21 | Use direct single-line Python file writers instead of multiline terminal strings | Eliminates Zsh parse errors and heredoc hanging loops | Active |
 | 2026-08-21 | Maintain 00_System/Errors_and_Preferences.md for system errors and user decisions | Prevents repeating terminal issues and logs architectural choices | Active |
+| 2026-08-21 | Use cat EOF heredoc for python script creation | Bypasses Zsh history expansion, escaping issues, and non-UTF-8 encoding errors | Active |
