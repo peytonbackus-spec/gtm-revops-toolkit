@@ -3,3 +3,8 @@ Created research note at /Users/peytonbackus/GTM 2nd Brain/30_Resources/Research
 Created research note at /Users/peytonbackus/GTM 2nd Brain/30_Resources/Research/GTM_Research_2026-08-21.md
 === PIPELINE RUN: Fri Aug 21 13:06:35 EDT 2026 ===
 Created research note at /Users/peytonbackus/GTM 2nd Brain/30_Resources/Research/GTM_Research_2026-08-21.md
+=== PIPELINE RUN: Fri 21 Aug 2026 13:08:01 EDT ===
+  File "/Users/peytonbackus/GTM 2nd Brain/30_Resources/Code/gtm_researcher.py", line 48
+    section_md += f"- [{art["title"]}]({art["link"]})\n"
+                             ^
+SyntaxError: f-string: unmatched '['
