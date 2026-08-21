@@ -1,41 +1,42 @@
-import json
 import sys
 
-def score_deal(deal_data):
-    weights = {
-        "metrics": 15,
-        "economic_buyer": 20,
-        "decision_criteria": 10,
-        "decision_process": 10,
-        "paper_process": 10,
-        "identify_pain": 15,
-        "champion": 15,
-        "competitors": 5
+def score_sfdc_opportunity(opportunity_data):
+    # Mapping MEDDPICC criteria to standard SFDC Opportunity fields/custom APEX fields
+    sfdc_field_map = {
+        "Quantified_ROI__c": ("Metrics", 15),
+        "Economic_Buyer_Contacted__c": ("Economic Buyer", 20),
+        "Technical_Evaluation_Criteria__c": ("Decision Criteria", 10),
+        "Decision_Proc_Documented__c": ("Decision Process", 10),
+        "Paper_Process_Stage__c": ("Paper Process", 10),
+        "Quantified_Pain__c": ("Identify Pain", 15),
+        "Primary_Champion__c": ("Champion", 15),
+        "Primary_Competitor__c": ("Competitors", 5)
     }
     
     total_score = 0
     missing = []
     
-    for key, weight in weights.items():
-        if deal_data.get(key):
+    for sfdc_field, (label, weight) in sfdc_field_map.items():
+        if opportunity_data.get(sfdc_field):
             total_score += weight
         else:
-            missing.append(key.replace('_', ' ').title())
+            missing.append(label)
             
     return total_score, missing
 
 if __name__ == "__main__":
-    sample_deal = {
-        "metrics": True,
-        "economic_buyer": False,
-        "decision_criteria": True,
-        "decision_process": True,
-        "paper_process": False,
-        "identify_pain": True,
-        "champion": True,
-        "competitors": False
+    # Sample SFDC Opportunity Record
+    sample_opp = {
+        "Quantified_ROI__c": True,
+        "Economic_Buyer_Contacted__c": False,
+        "Technical_Evaluation_Criteria__c": True,
+        "Decision_Proc_Documented__c": True,
+        "Paper_Process_Stage__c": None,
+        "Quantified_Pain__c": True,
+        "Primary_Champion__c": True,
+        "Primary_Competitor__c": None
     }
     
-    score, missing_fields = score_deal(sample_deal)
-    print(f"[✓] MEDDPICC Deal Score: {score}/100")
-    print(f"[!] Gaps Identified: {', '.join(missing_fields)}")
+    score, missing_fields = score_sfdc_opportunity(sample_opp)
+    print(f"[✓] SFDC Opportunity MEDDPICC Score: {score}/100")
+    print(f"[!] SFDC Qualification Gaps: {', '.join(missing_fields)}")
