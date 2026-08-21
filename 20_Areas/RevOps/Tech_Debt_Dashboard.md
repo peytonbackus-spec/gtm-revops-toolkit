@@ -11,7 +11,7 @@ status: active
 
 # RevOps Technical Debt Dashboard
 
-*Last Scanned: 2026-08-21 13:25* | **Active Debt Items: 0**
+*Last Scanned: 2026-08-21 13:26* | **Active Debt Items: 2**
 
 ---
 
@@ -19,7 +19,8 @@ status: active
 
 | Source Note | Location | Description / Remedy | Status |
 | :--- | :--- | :--- | :--- |
-| *No active tech debt found* | - | Tag items with `#tech-debt` across vault notes to track | - |
+| [Sync_Inclusion_Rules.md](20_Areas/RevOps/Sync_Inclusion_Rules.md) | Line 14 | Disqualification workflow currently lacks field validation for missing reasons. | Open |
+| [Lead_Scoring_PQL_Spec.md](20_Areas/RevOps/Lead_Scoring_PQL_Spec.md) | Line 25 | Review scoring decay rules quarterly to prevent stale MQL volume. | Open |
 
 ---
 
