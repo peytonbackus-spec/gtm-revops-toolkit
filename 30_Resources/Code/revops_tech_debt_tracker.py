@@ -1,47 +1,70 @@
 """
-RevOps Tech Debt Tracker & Schema Auditor
-Analyzes Opportunity object custom fields for low population rates and stale schema debt.
+RevOps Schema Tech Debt & Metadata Governance Auditor
+Analyzes Salesforce field utilization and identifies fields slated for deprecation.
 """
 
-import json
+from datetime import datetime
+from typing import List, Dict, Any
+
 
 class RevOpsTechDebtAuditor:
-    def __init__(self, metadata_sample):
-        self.metadata = metadata_sample
 
-    def run_schema_audit(self, population_threshold=5.0):
-        debt_report = []
-        
-        for field in self.metadata:
+    def __init__(self, schema_telemetry: List[Dict[str, Any]]):
+        self.schema_telemetry = schema_telemetry
+
+    def run_schema_audit(self) -> List[Dict[str, Any]]:
+        audit_results = []
+        for field in self.schema_telemetry:
             api_name = field.get('api_name')
-            pop_rate = field.get('population_rate_pct', 0.0)
-            last_modified_days = field.get('days_since_last_modified', 0)
-            
-            # Identify tech debt candidates (population < 5% or unupdated for 180+ days)
-            if pop_rate < population_threshold or last_modified_days > 180:
-                severity = 'HIGH' if pop_rate == 0.0 else 'MEDIUM'
-                action = 'SAFE TO DEPRECATE' if pop_rate == 0.0 else 'REVIEW WITH SALES OPS'
-                
-                debt_report.append({
+            fill_rate = field.get('population_rate_pct', 0.0)
+            days_inactive = field.get('days_since_last_modified', 0)
+
+            if fill_rate < 5.0 and days_inactive > 180:
+                severity = 'HIGH'
+                action = 'DEPRECATE_IMMEDIATELY'
+            elif fill_rate < 15.0 or days_inactive > 90:
+                severity = 'MEDIUM'
+                action = 'REVIEW_WITH_BUSINESS_OWNER'
+            else:
+                severity = 'LOW'
+                action = 'RETAIN'
+
+            if severity in ['HIGH', 'MEDIUM']:
+                audit_results.append({
                     'api_name': api_name,
-                    'population_rate': f'{pop_rate}%',
-                    'days_inactive': last_modified_days,
+                    'population_rate_pct': fill_rate,
+                    'days_inactive': days_inactive,
                     'severity': severity,
                     'recommended_action': action
                 })
-                
-        return debt_report
+
+        return audit_results
+
+    def generate_markdown_report(self, audit_results: List[Dict[str, Any]]) -> str:
+        lines = [
+            '# Salesforce Schema Tech Debt Audit Report',
+            f"*Generated on: {datetime.now().strftime('%Y-%m-%d')}*",
+            '',
+            '| Field API Name | Fill Rate (%) | Inactive Days | Severity | Action |',
+            '| :--- | :--- | :--- | :--- | :--- |'
+        ]
+
+        for item in audit_results:
+            lines.append(
+                f"| `{item['api_name']}` | {item['population_rate_pct']}% | "
+                f"{item['days_inactive']} | **{item['severity']}** | `{item['recommended_action']}` |"
+            )
+
+        return '\n'.join(lines)
+
 
 if __name__ == '__main__':
-    mock_sfdc_schema = [
-        {'api_name': 'Legacy_Lead_Source_Detail__c', 'population_rate_pct': 0.0, 'days_since_last_modified': 240},
-        {'api_name': 'Quantified_ROI__c', 'population_rate_pct': 82.4, 'days_since_last_modified': 12},
-        {'api_name': 'Temp_Competitor_Notes__c', 'population_rate_pct': 1.2, 'days_since_last_modified': 195},
-        {'api_name': 'Economic_Buyer_Contacted__c', 'population_rate_pct': 74.1, 'days_since_last_modified': 3}
+    sample_schema = [
+        {'api_name': 'Legacy_Lead_Score__c', 'population_rate_pct': 1.2, 'days_since_last_modified': 210},
+        {'api_name': 'MEDDPICC_Health_Score__c', 'population_rate_pct': 94.5, 'days_since_last_modified': 2},
+        {'api_name': 'Old_Campaign_ID__c', 'population_rate_pct': 12.0, 'days_since_last_modified': 110}
     ]
 
-    auditor = RevOpsTechDebtAuditor(mock_sfdc_schema)
-    audit_results = auditor.run_schema_audit()
-
-    print('=== RevOps Tech Debt Audit Results ===')
-    print(json.dumps(audit_results, indent=2))
+    auditor = RevOpsTechDebtAuditor(sample_schema)
+    results = auditor.run_schema_audit()
+    print(auditor.generate_markdown_report(results))
