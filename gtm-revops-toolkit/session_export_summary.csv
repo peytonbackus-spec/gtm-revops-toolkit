@@ -1,0 +1,60 @@
+File Name,Architecture Layer / Folder,Relative Path,Size (Bytes),Last Modified,Git Status
+run_pipeline.sh,Root / Governance,run_pipeline.sh,417,2026-08-21 13:05:24,Tracked in Git
+sync_vault.sh,Root / Governance,sync_vault.sh,1218,2026-08-21 12:59:10,Tracked in Git
+launchd_stderr.log,Root / Governance,launchd_stderr.log,0,2026-08-21 13:05:41,Tracked in Git
+00_GTM_Dashboard.md,Root / Governance,00_GTM_Dashboard.md,578,2026-08-21 12:09:17,Tracked in Git
+sync.log,Root / Governance,sync.log,4522,2026-08-21 13:09:48,Tracked in Git
+README.md,Root / Governance,README.md,1846,2026-08-24 09:41:33,Tracked in Git
+research.log,Root / Governance,research.log,1049,2026-08-21 13:09:46,Tracked in Git
+launchd_stdout.log,Root / Governance,launchd_stdout.log,0,2026-08-21 13:05:41,Tracked in Git
+MEDDPICC_Deal_Inspection.md,20_Areas,20_Areas/RevOps_Frameworks/MEDDPICC_Deal_Inspection.md,1814,2026-08-21 12:46:05,Tracked in Git
+Territory_Planning_and_Carveout_Model.md,20_Areas,20_Areas/RevOps_Frameworks/Territory_Planning_and_Carveout_Model.md,1192,2026-08-21 12:48:02,Tracked in Git
+Revenue_Forecasting_and_Capacity_Model.md,20_Areas,20_Areas/RevOps_Frameworks/Revenue_Forecasting_and_Capacity_Model.md,1902,2026-08-21 12:45:11,Tracked in Git
+Customer_Health_Scoring_Model.md,20_Areas,20_Areas/RevOps_Frameworks/Customer_Health_Scoring_Model.md,1311,2026-08-21 12:49:28,Tracked in Git
+SFDC_MEDDPICC_Validation_Spec.md,20_Areas,20_Areas/RevOpp/Specs/SFDC_MEDDPICC_Validation_Spec.md,1510,2026-08-21 13:54:55,Tracked in Git
+SFDC_Tech_Debt_Audit.md,20_Areas,20_Areas/RevOpp/Specs/SFDC_Tech_Debt_Audit.md,339,2026-08-24 09:54:51,Tracked in Git
+GTM_OS_Architecture_Spec.md,20_Areas,20_Areas/RevOpp/Architectures/GTM_OS_Architecture_Spec.md,2149,2026-08-24 09:48:49,Tracked in Git
+Sync_Inclusion_Rules.md,20_Areas,20_Areas/RevOps/Sync_Inclusion_Rules.md,240,2026-08-21 13:26:20,Tracked in Git
+Lifecycle_Stage_MQL_SQL_Spec.md,20_Areas,20_Areas/RevOps/Lifecycle_Stage_MQL_SQL_Spec.md,2407,2026-08-21 13:25:43,Tracked in Git
+Tech_Debt_Dashboard.md,20_Areas,20_Areas/RevOps/Tech_Debt_Dashboard.md,913,2026-08-21 13:38:07,Tracked in Git
+HubSpot_SFDC_Architecture_Framework.md,20_Areas,20_Areas/RevOps/HubSpot_SFDC_Architecture_Framework.md,2410,2026-08-21 13:20:02,Tracked in Git
+Lead_Scoring_PQL_Spec.md,20_Areas,20_Areas/RevOps/Lead_Scoring_PQL_Spec.md,765,2026-08-21 13:26:14,Tracked in Git
+PLG_PQL_Routing.md,20_Areas,20_Areas/RevOps/Workflows/PLG_PQL_Routing.md,536,2026-08-21 13:34:55,Tracked in Git
+SFDC_PQL_Routing.md,20_Areas,20_Areas/RevOps/Workflows/SFDC_PQL_Routing.md,860,2026-08-21 13:37:51,Tracked in Git
+MEDDPICC_Deal_Inspection.md,20_Areas,20_Areas/RevOps/Playbooks/MEDDPICC_Deal_Inspection.md,657,2026-08-21 13:34:55,Tracked in Git
+README.md,gtm-revops-toolkit,gtm-revops-toolkit/README.md,1089,2026-08-21 11:55:52,Tracked in Git
+GTM_ROADMAP.md,gtm-revops-toolkit,gtm-revops-toolkit/GTM_ROADMAP.md,860,2026-08-20 16:14:59,Tracked in Git
+CONTRIBUTING.md,gtm-revops-toolkit,gtm-revops-toolkit/CONTRIBUTING.md,752,2026-08-20 15:47:02,Tracked in Git
+SKILL_MATRIX.md,gtm-revops-toolkit,gtm-revops-toolkit/SKILL_MATRIX.md,1274,2026-08-20 16:14:38,Tracked in Git
+pipeline_coverage.sql,gtm-revops-toolkit,gtm-revops-toolkit/dashboards/pipeline_coverage.sql,691,2026-08-20 15:47:02,Tracked in Git
+revenue_waterfall.json,gtm-revops-toolkit,gtm-revops-toolkit/dashboards/revenue_waterfall.json,465,2026-08-20 15:45:04,Tracked in Git
+multi_touch.sql,gtm-revops-toolkit,gtm-revops-toolkit/attribution/multi_touch.sql,718,2026-08-20 15:45:04,Tracked in Git
+w_shaped_attribution.sql,gtm-revops-toolkit,gtm-revops-toolkit/attribution/w_shaped_attribution.sql,739,2026-08-20 15:47:02,Tracked in Git
+gtm_agent_framework.py,gtm-revops-toolkit,gtm-revops-toolkit/automation/gtm_agent_framework.py,938,2026-08-20 16:14:52,Tracked in Git
+hubspot_lead_router.py,gtm-revops-toolkit,gtm-revops-toolkit/automation/hubspot_lead_router.py,712,2026-08-20 15:45:04,Tracked in Git
+apollo_enrichment_webhook.py,gtm-revops-toolkit,gtm-revops-toolkit/automation/apollo_enrichment_webhook.py,1525,2026-08-20 15:47:02,Tracked in Git
+GTM_Research_2026-08-21.md,30_Resources,30_Resources/Research/GTM_Research_2026-08-21.md,2160,2026-08-21 13:09:46,Tracked in Git
+add_decision.py,30_Resources,30_Resources/Code/add_decision.py,613,2026-08-21 13:32:13,Tracked in Git
+git_vault_sync_checker.py,30_Resources,30_Resources/Code/git_vault_sync_checker.py,2020,2026-08-21 12:51:20,Tracked in Git
+apollo_enrichment_webhook.py,30_Resources,30_Resources/Code/apollo_enrichment_webhook.py,2239,2026-08-21 12:45:11,Tracked in Git
+w_shaped_attribution.sql,30_Resources,30_Resources/Code/w_shaped_attribution.sql,1435,2026-08-21 12:46:05,Tracked in Git
+gtm_researcher.py,30_Resources,30_Resources/Code/gtm_researcher.py,2326,2026-08-21 13:09:36,Tracked in Git
+meddpicc_scorer.py,30_Resources,30_Resources/Code/meddpicc_scorer.py,1533,2026-08-21 13:37:51,Tracked in Git
+l2a_matching_engine.py,30_Resources,30_Resources/Code/l2a_matching_engine.py,1264,2026-08-21 12:46:05,Tracked in Git
+revops_tech_debt_tracker.py,30_Resources,30_Resources/Code/revops_tech_debt_tracker.py,2617,2026-08-24 09:56:28,Tracked in Git
+churn_prediction_pipeline.py,30_Resources,30_Resources/Code/churn_prediction_pipeline.py,1518,2026-08-21 12:49:28,Tracked in Git
+sfdc_pql_ingestor.py,30_Resources,30_Resources/Code/sfdc_pql_ingestor.py,1269,2026-08-21 13:54:55,Tracked in Git
+outbound_ai_agent_orchestrator.py,30_Resources,30_Resources/Code/outbound_ai_agent_orchestrator.py,1689,2026-08-21 12:48:02,Tracked in Git
+test_revops_suite.py,30_Resources,30_Resources/Code/tests/test_revops_suite.py,2171,2026-08-24 09:51:50,Tracked in Git
+l2a_matching_engine.py,30_Resources,30_Resources/Code/orchestrators/l2a_matching_engine.py,2401,2026-08-24 09:43:01,Tracked in Git
+churn_prediction_pipeline.py,30_Resources,30_Resources/Code/scoring/churn_prediction_pipeline.py,1680,2026-08-24 09:44:41,Tracked in Git
+meddpicc_health_engine.py,30_Resources,30_Resources/Code/scoring/meddpicc_health_engine.py,2113,2026-08-24 09:41:50,Tracked in Git
+PLG_PQL_Routing_Rules.md,30_Resources,30_Resources/Tech_Stack/PLG_PQL_Routing_Rules.md,1152,2026-08-21 12:49:28,Tracked in Git
+Salesforce_HubSpot_Sync_Architecture.md,30_Resources,30_Resources/Tech_Stack/Salesforce_HubSpot_Sync_Architecture.md,2020,2026-08-21 12:45:11,Tracked in Git
+Custom_Object_Schemas.md,30_Resources,30_Resources/Tech_Stack/Custom_Object_Schemas.md,1489,2026-08-21 12:48:02,Tracked in Git
+HubSpot.md,30_Resources,30_Resources/Tech_Stack/HubSpot.md,171,2026-08-21 12:10:40,Tracked in Git
+T_Project.md,00_Meta,00_Meta/Templates/T_Project.md,506,2026-08-21 12:08:55,Tracked in Git
+T_TechStack.md,00_Meta,00_Meta/Templates/T_TechStack.md,444,2026-08-21 12:08:55,Tracked in Git
+Pipeline_Attribution_Setup.md,10_Projects,10_Projects/Pipeline_Attribution_Setup.md,226,2026-08-21 12:10:40,Tracked in Git
+Vault_Manifest.md,10_Projects,10_Projects/GTM_Engine/Vault_Manifest.md,1046,2026-08-24 09:51:50,Tracked in Git
+Errors_and_Preferences.md,00_System,00_System/Errors_and_Preferences.md,1437,2026-08-21 13:32:34,Tracked in Git
