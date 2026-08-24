@@ -1,74 +1,47 @@
-import os
-from datetime import datetime
-
-vault = os.path.expanduser("~/GTM 2nd Brain")
-dashboard_path = os.path.join(vault, "20_Areas/RevOps/Tech_Debt_Dashboard.md")
-
-tech_debt_items = []
-
-for root, _, files in os.walk(vault):
-    for file in files:
-        if file.endswith(".md") and file != "Tech_Debt_Dashboard.md":
-            file_p = os.path.join(root, file)
-            with open(file_p, "r", encoding="utf-8", errors="ignore") as f:
-                lines = f.readlines()
-                for idx, line in enumerate(lines):
-                    if "#tech-debt" in line or "TECH-DEBT:" in line:
-                        clean_line = line.replace("#tech-debt", "").replace("TECH-DEBT:", "").strip()
-                        rel_path = os.path.relpath(file_p, vault)
-                        tech_debt_items.append({
-                            "file": file,
-                            "path": rel_path,
-                            "line": idx + 1,
-                            "description": clean_line if clean_line else "Unlabeled debt item"
-                        })
-
-date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
-total_items = len(tech_debt_items)
-
-rows = []
-if tech_debt_items:
-    for item in tech_debt_items:
-        rows.append(f"| [{item['file']}]({item['path']}) | Line {item['line']} | {item['description']} | Open |")
-else:
-    rows.append("| *No active tech debt found* | - | Tag items with `#tech-debt` across vault notes to track | - |")
-
-rows_str = "\n".join(rows)
-
-content = f"""---
-type: area
-category: revops
-tags:
-  - revops
-  - tech-debt
-  - dashboard
-date: {date_str[:10]}
-status: active
----
-
-# RevOps Technical Debt Dashboard
-
-*Last Scanned: {date_str}* | **Active Debt Items: {total_items}**
-
----
-
-## Active Technical Debt Backlog
-
-| Source Note | Location | Description / Remedy | Status |
-| :--- | :--- | :--- | :--- |
-{rows_str}
-
----
-
-## Usage Guide
-To register a new piece of RevOps technical debt, add `#tech-debt` followed by an explanation anywhere in your Obsidian notes, then run:
-
-```bash
-python3 \"$HOME/GTM 2nd Brain/30_Resources/Code/revops_tech_debt_tracker.py\"
-```
+"""
+RevOps Tech Debt Tracker & Schema Auditor
+Analyzes Opportunity object custom fields for low population rates and stale schema debt.
 """
 
-with open(dashboard_path, "w", encoding="utf-8") as f:
-    f.write(content)
+import json
 
-print(f"[✓] Generated Tech Debt Dashboard at {dashboard_path} with {total_items} item(s).")
+class RevOpsTechDebtAuditor:
+    def __init__(self, metadata_sample):
+        self.metadata = metadata_sample
+
+    def run_schema_audit(self, population_threshold=5.0):
+        debt_report = []
+        
+        for field in self.metadata:
+            api_name = field.get('api_name')
+            pop_rate = field.get('population_rate_pct', 0.0)
+            last_modified_days = field.get('days_since_last_modified', 0)
+            
+            # Identify tech debt candidates (population < 5% or unupdated for 180+ days)
+            if pop_rate < population_threshold or last_modified_days > 180:
+                severity = 'HIGH' if pop_rate == 0.0 else 'MEDIUM'
+                action = 'SAFE TO DEPRECATE' if pop_rate == 0.0 else 'REVIEW WITH SALES OPS'
+                
+                debt_report.append({
+                    'api_name': api_name,
+                    'population_rate': f'{pop_rate}%',
+                    'days_inactive': last_modified_days,
+                    'severity': severity,
+                    'recommended_action': action
+                })
+                
+        return debt_report
+
+if __name__ == '__main__':
+    mock_sfdc_schema = [
+        {'api_name': 'Legacy_Lead_Source_Detail__c', 'population_rate_pct': 0.0, 'days_since_last_modified': 240},
+        {'api_name': 'Quantified_ROI__c', 'population_rate_pct': 82.4, 'days_since_last_modified': 12},
+        {'api_name': 'Temp_Competitor_Notes__c', 'population_rate_pct': 1.2, 'days_since_last_modified': 195},
+        {'api_name': 'Economic_Buyer_Contacted__c', 'population_rate_pct': 74.1, 'days_since_last_modified': 3}
+    ]
+
+    auditor = RevOpsTechDebtAuditor(mock_sfdc_schema)
+    audit_results = auditor.run_schema_audit()
+
+    print('=== RevOps Tech Debt Audit Results ===')
+    print(json.dumps(audit_results, indent=2))
