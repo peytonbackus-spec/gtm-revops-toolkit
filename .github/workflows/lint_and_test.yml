@@ -1,4 +1,4 @@
-name: RevOps Toolkit CI
+name: RevOps Engineering CI Pipeline
 
 on:
   push:
@@ -7,26 +7,26 @@ on:
     branches: [ main ]
 
 jobs:
-  validate-scripts:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v3
 
-    - name: Set up Python
+    - name: Set up Python Environment
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: Run Syntax & Execution Checks
+    - name: Run Python Syntax Compilation Checks
       run: |
         python -m py_compile 30_Resources/Code/sfdc_pql_ingestor.py
         python -m py_compile 30_Resources/Code/scoring/meddpicc_health_engine.py
         python -m py_compile 30_Resources/Code/orchestrators/l2a_matching_engine.py
         python -m py_compile 30_Resources/Code/revops_tech_debt_tracker.py
         python -m py_compile 30_Resources/Code/scoring/churn_prediction_pipeline.py
-        
-    - name: Execute Test Harness
+
+    - name: Execute Full Integration Test Suite
       run: |
-        python 30_Resources/Code/scoring/meddpicc_health_engine.py
-        python 30_Resources/Code/scoring/churn_prediction_pipeline.py
+        python -m unittest discover -s 30_Resources/Code/tests -p "test_*.py"
