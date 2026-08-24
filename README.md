@@ -1,29 +1,42 @@
-# Go-To-Market & RevOps Engineering Toolkit
+# Enterprise GTM & RevOps Engineering Toolkit
 
-A collection of operational frameworks, Python automation scripts, and deployment roadmaps for modern GTM and Revenue Operations teams.
+An end-to-end framework for revenue architecture, enterprise deal orchestration, AI-driven lead routing, and MEDDPICC validation.
 
-## 📂 Repository Structure
+## 🏗️ Architecture Overview
 
-```text
-gtm-revops-toolkit/
-├── SKILL_MATRIX.md               # Competency mapping across GTM Eng, RevOps, & SalesDev
-├── GTM_ROADMAP.md                # 4-stage execution roadmap for revenue systems
-├── automation/
-│   └── gtm_agent_framework.py    # Python framework for automated ICP qualification & routing
-├── attribution/                  # Multi-touch attribution SQL & dbt models (In Progress)
-└── dashboards/                   # ARR waterfall & pipeline analytics specs (In Progress)
+```
+  [Inbound Webhooks / Product Events]
+                  │
+                  ▼
+   ┌─────────────────────────────┐
+   │ PQL & Enrichment Pipeline    │ ── (Apollo / L2A Matching)
+   └──────────────┬──────────────┘
+                  │
+                  ▼
+   ┌─────────────────────────────┐
+   │ MEDDPICC Scoring & Health    │ ── (SFDC REST API / Validation Rules)
+   └──────────────┬──────────────┘
+                  │
+                  ▼
+   ┌─────────────────────────────┐
+   │ Revenue Intelligence & Risk │ ── (Attribution & Churn Models)
+   └─────────────────────────────┘
 ```
 
-## 🛠 Tech Stack & Tooling
+## 📦 Directory Structure
 
-* **Data & ETL:** SQL, dbt, Snowflake, BigQuery, Census, Hightouch
-* **Automation & Code:** Python, Node.js, Webhooks, REST APIs
-* **CRMs & RevOps:** HubSpot, Salesforce, Gong, LeanData, Apollo.io
+- `20_Areas/RevOpp/Specs/`: Technical field specifications & SFDC validation rules.
+- `20_Areas/RevOpp/Architectures/`: Multi-touch attribution and deal routing diagrams.
+- `30_Resources/Code/orchestrators/`: Multi-agent pipeline triggers and Webhook handlers.
+- `30_Resources/Code/scoring/`: Automated MEDDPICC qualification and PQL engines.
+- `30_Resources/Code/attribution/`: SQL & Python scripts for W-shaped attribution modelling.
 
-## ⚡ Quickstart
-
-Run the ICP evaluation script locally:
+## 🚀 Getting Started
 
 ```bash
-python3 automation/gtm_agent_framework.py
+# Install dependencies
+pip install -r requirements.txt
+
+# Execute PQL Ingestion (Dry-run mode)
+python3 30_Resources/Code/sfdc_pql_ingestor.py
 ```
