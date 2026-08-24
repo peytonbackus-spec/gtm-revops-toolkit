@@ -1,0 +1,32 @@
+name: RevOps Toolkit CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Run Syntax & Execution Checks
+      run: |
+        python -m py_compile 30_Resources/Code/sfdc_pql_ingestor.py
+        python -m py_compile 30_Resources/Code/scoring/meddpicc_health_engine.py
+        python -m py_compile 30_Resources/Code/orchestrators/l2a_matching_engine.py
+        python -m py_compile 30_Resources/Code/revops_tech_debt_tracker.py
+        python -m py_compile 30_Resources/Code/scoring/churn_prediction_pipeline.py
+        
+    - name: Execute Test Harness
+      run: |
+        python 30_Resources/Code/scoring/meddpicc_health_engine.py
+        python 30_Resources/Code/scoring/churn_prediction_pipeline.py
