@@ -1,0 +1,12 @@
+# AI GTM & RevOps Consulting
+> Autonomous revenue engines and GTM system architecture for B2B SaaS companies.
+
+## Services & Scope
+- GTM Audit & 90-Day Automation Roadmap
+- Autonomous Pipeline Engine Retainer (Clay + HubSpot + Claude API)
+- 6-Week RevOps Sprint & CRM Architecture
+
+## Core Tech Stack
+- Orchestration: Claude Code, n8n, Make.com
+- CRM & Pipeline: HubSpot, Apollo, Clay
+- Custom AI: Python, FastAPI Webhooks, Claude API
