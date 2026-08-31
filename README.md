@@ -1,60 +1,35 @@
-# GTM RevOps Toolkit
+# Enterprise Go-To-Market & RevOps Engineering Toolkit
 
-An end-to-end framework for revenue architecture, enterprise deal
-orchestration, AI-driven lead routing, and MEDDPICC validation.
-Also contains the complete business planning documents for the
-consulting firm built on top of this toolkit.
+A production-ready, company-agnostic Go-To-Market (GTM) engine and Revenue Operations architecture. Designed for rapid deployment across high-yield B2B SaaS, industrial tech, and fintech organizations.
 
-## Architecture Overview
+---
 
-```
-[Inbound Webhooks / Product Events]
-                │
-                ▼
- ┌─────────────────────────────┐
- │ PQL & Enrichment Pipeline    │ ── (Apollo / L2A Matching)
- └──────────────┬──────────────┘
-                │
-                ▼
- ┌─────────────────────────────┐
- │ MEDDPICC Scoring & Health    │ ── (SFDC REST API / Validation Rules)
- └──────────────┬──────────────┘
-                │
-                ▼
- ┌─────────────────────────────┐
- │ Revenue Intelligence & Risk │ ── (Attribution & Churn Models)
- └─────────────────────────────┘
+### Master GTM Operating System Flow
+
+```mermaid
+flowchart LR
+    A[Signal Scraper & Intent Trigger] --> B[Python Enrichment Engine]
+    B --> C[Outbound & Co-Sell Playbook]
+    C --> D[Executive Discovery Call]
+    D --> E[BVA / ROI Model Simulation]
+    E --> F[Closed Won ARR & Pipeline]
 ```
 
-## Repository Structure
+---
 
-| Folder | Contents |
-|--------|----------|
-| `00_Meta/` | Templates and system config |
-| `00_System/` | System-level documentation |
-| `10_Projects/` | Active project files |
-| `20_Areas/` | RevOps specs, architectures, field definitions |
-| `30_Resources/` | Code: orchestrators, scoring, attribution |
-| `50_Business/` | Business planning, GTM strategy, execution roadmap |
-| `Audits/` | Client audit templates |
-| `Inbound/` | Inbound pipeline configurations |
-| `Scripts/` | Utility scripts |
-| `Signals/` | Buying signal definitions and scoring |
-| `Templates/` | Reusable templates |
+### Master Architecture Contents
 
-## Quick Start (Toolkit)
+| Category | Component | Functional Scope |
+| :--- | :--- | :--- |
+| **GTM Strategy** | `01_ICP_and_Segmentation_Framework.md` | Target account selection, buyer personas, and signal scoring |
+| **Sales Execution** | `02_Executive_Outbound_Playbooks.md` | Signal-led scripts, discovery maps, and objection handling |
+| **Automation & Code**| `03_Signal_Enrichment_Engine.py` | Python prototypes for Clay automations & signal parsing |
+| **Financial Engineering**| `04_CFO_BVA_and_ROI_Calculator.py` | Payback period models, downtime cost, and unit economics |
+| **RevOps & Systems** | `05_Salesforce_Data_Model_and_Pipeline.md` | Custom object schemas, stage exit criteria, & metrics |
+| **Template Guide** | `VARIABLES.md` | Universal variable substitution guide for client adaptation |
 
-```bash
-# Install dependencies
-pip install -r requirements.txt
+---
 
-# Execute PQL Ingestion (Dry-run mode)
-python3 30_Resources/Code/sfdc_pql_ingestor.py
-```
+### Variable Customization
 
-## Business Planning (`50_Business/`)
-
-The `50_Business/` folder contains the full business strategy and
-execution plan for the Autonomous AI GTM Consulting firm. See
-[`50_Business/README.md`](50_Business/README.md) for details.
-
+This repo uses modular variable tags (e.g., `[COMPANY_NAME]`, `[TARGET_BUYER_PERSONA]`). Refer to `VARIABLES.md` to adapt this toolkit for specific executive interviews, client proposals, or advisory engagements.
