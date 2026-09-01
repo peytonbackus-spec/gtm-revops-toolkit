@@ -1,0 +1,9 @@
+version: "1.0"
+pipeline: sdr_waterfall_enrichment
+rules:
+  - step: firmographics
+    sequence:
+      - provider: clay_api
+        condition: "account.domain != null"
+      - provider: apollo
+        condition: "account.employee_count == null"
