@@ -33,3 +33,9 @@ flowchart LR
 ### Variable Customization
 
 This repo uses modular variable tags (e.g., `[COMPANY_NAME]`, `[TARGET_BUYER_PERSONA]`). Refer to `VARIABLES.md` to adapt this toolkit for specific executive interviews, client proposals, or advisory engagements.
+
+## GTM Engineering & AI Systems Modules
+- **AI Agent Orchestration**: Specifications for Clay, API tool calling, and LLM workflow automation (`modules/gtm_engineering/ai_agents/`).
+- **Deal-Risk & Pipeline Scoring**: Algorithmic models for pipeline health and forecast accuracy (`modules/gtm_engineering/deal_scoring/`).
+- **AI Evals & Guardrails**: Operational frameworks for AI observability, data security, and human-in-the-loop controls (`modules/gtm_engineering/evaluation_guardrails/`).
+- **RFP & Security Automation**: Scalable architecture for automated questionnaires and technical sales enablement (`modules/gtm_engineering/rfp_automation/`).
