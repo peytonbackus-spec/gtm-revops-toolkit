@@ -6,8 +6,6 @@ A production-grade toolkit of specifications, Python scoring engines, evaluation
 
 ## 🏗️ Architecture Overview
 
-<img src="templates/architecture_diagrams/gtm_revops_architecture.png" alt="GTM Infrastructure Architecture" width="100%" />
-
 <details>
 <summary><b>View Interactive Mermaid Architecture Diagram</b></summary>
 
