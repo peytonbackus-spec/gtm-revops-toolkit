@@ -4,6 +4,52 @@ A production-grade toolkit of specifications, Python scoring engines, evaluation
 
 ---
 
+## 🏗️ Architecture Overview
+
+<img src="templates/architecture_diagrams/gtm_revops_architecture.png" alt="GTM Infrastructure Architecture" width="100%" />
+
+<details>
+<summary><b>View Interactive Mermaid Architecture Diagram</b></summary>
+
+```mermaid
+flowchart TD
+    subgraph Ingestion ["1. Signal Ingestion & Webhooks"]
+        A[Inbound Webhooks / Web Activity]
+        B[6sense / Intent Data]
+        C[CRM Event Triggers]
+    end
+
+    subgraph Enrichment ["2. PQL & Enrichment Engine"]
+        D[Clay Waterfall Enrichment]
+        E[Domain & ICP Matcher]
+    end
+
+    subgraph Scoring ["3. Scoring & Risk Engine"]
+        F[Pipeline Health Model]
+        G[MEDDPICC & Deal Scoring]
+    end
+
+    subgraph Action ["4. Action Execution & Workflows"]
+        H[Outreach / Sales Execution]
+        I[Slack / Teams Real-time Alerts]
+        J[RFP Vector RAG Service]
+    end
+
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    G --> I
+    G --> J
+```
+
+</details>
+
+---
+
 ## 🛠️ Module Overview
 
 | Category | Module Directory | Key Capabilities |
@@ -34,6 +80,7 @@ gtm-revops-toolkit/
 │       └── capacity_planning/
 └── templates/
     └── architecture_diagrams/
+        └── gtm_revops_architecture.png
 ```
 
 ---
