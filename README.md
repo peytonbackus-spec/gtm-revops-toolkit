@@ -1,41 +1,50 @@
-# Enterprise Go-To-Market & RevOps Engineering Toolkit
+# GTM & RevOps Infrastructure Toolkit
 
-A production-ready, company-agnostic Go-To-Market (GTM) engine and Revenue Operations architecture. Designed for rapid deployment across high-yield B2B SaaS, industrial tech, and fintech organizations.
+A production-grade toolkit of specifications, Python scoring engines, evaluation frameworks, and workflow automation templates designed for modern GTM Engineering, AI-native revenue operations, and sales ops teams.
 
 ---
 
-### Master GTM Operating System Flow
+## 🛠️ Module Overview
 
-```mermaid
-flowchart LR
-    A[Signal Scraper & Intent Trigger] --> B[Python Enrichment Engine]
-    B --> C[Outbound & Co-Sell Playbook]
-    C --> D[Executive Discovery Call]
-    D --> E[BVA / ROI Model Simulation]
-    E --> F[Closed Won ARR & Pipeline]
+| Category | Module Directory | Key Capabilities |
+| :--- | :--- | :--- |
+| **GTM Engineering** | `modules/gtm_engineering/ai_agents/` | Workflow orchestration, Clay enrichments, API tool calling |
+| **Deal Scoring** | `modules/gtm_engineering/deal_scoring/` | Algorithmic deal-risk & pipeline-health evaluation (`pipeline_health_model.py`) |
+| **AI Evals & Guardrails** | `modules/gtm_engineering/evaluation_guardrails/` | Observability, data privacy, and Human-in-the-Loop (HITL) specs |
+| **RFP Automation** | `modules/gtm_engineering/rfp_automation/` | Vector retrieval architecture for automated security & technical RFPs |
+| **SalesOps & Planning** | `modules/salesops/capacity_planning/` | Funnel modeling, capacity planning, and headcount performance tracking |
+
+---
+
+## 📂 Directory Architecture
+
+```text
+gtm-revops-toolkit/
+├── modules/
+│   ├── gtm_engineering/
+│   │   ├── ai_agents/
+│   │   │   └── agent_orchestration_spec.md
+│   │   ├── deal_scoring/
+│   │   │   └── pipeline_health_model.py
+│   │   ├── evaluation_guardrails/
+│   │   │   └── ai_eval_framework.md
+│   │   └── rfp_automation/
+│   │       └── rfp_pipeline_spec.md
+│   └── salesops/
+│       └── capacity_planning/
+└── templates/
+    └── architecture_diagrams/
 ```
 
 ---
 
-### Master Architecture Contents
+## 🚀 Getting Started
 
-| Category | Component | Functional Scope |
-| :--- | :--- | :--- |
-| **GTM Strategy** | `01_ICP_and_Segmentation_Framework.md` | Target account selection, buyer personas, and signal scoring |
-| **Sales Execution** | `02_Executive_Outbound_Playbooks.md` | Signal-led scripts, discovery maps, and objection handling |
-| **Automation & Code**| `03_Signal_Enrichment_Engine.py` | Python prototypes for Clay automations & signal parsing |
-| **Financial Engineering**| `04_CFO_BVA_and_ROI_Calculator.py` | Payback period models, downtime cost, and unit economics |
-| **RevOps & Systems** | `05_Salesforce_Data_Model_and_Pipeline.md` | Custom object schemas, stage exit criteria, & metrics |
-| **Template Guide** | `VARIABLES.md` | Universal variable substitution guide for client adaptation |
+```bash
+# Clone repository
+git clone https://github.com/peytonbackus-spec/gtm-revops-toolkit.git
+cd gtm-revops-toolkit
 
----
-
-### Variable Customization
-
-This repo uses modular variable tags (e.g., `[COMPANY_NAME]`, `[TARGET_BUYER_PERSONA]`). Refer to `VARIABLES.md` to adapt this toolkit for specific executive interviews, client proposals, or advisory engagements.
-
-## GTM Engineering & AI Systems Modules
-- **AI Agent Orchestration**: Specifications for Clay, API tool calling, and LLM workflow automation (`modules/gtm_engineering/ai_agents/`).
-- **Deal-Risk & Pipeline Scoring**: Algorithmic models for pipeline health and forecast accuracy (`modules/gtm_engineering/deal_scoring/`).
-- **AI Evals & Guardrails**: Operational frameworks for AI observability, data security, and human-in-the-loop controls (`modules/gtm_engineering/evaluation_guardrails/`).
-- **RFP & Security Automation**: Scalable architecture for automated questionnaires and technical sales enablement (`modules/gtm_engineering/rfp_automation/`).
+# Run deal health scoring model example
+python3 modules/gtm_engineering/deal_scoring/pipeline_health_model.py
+```
