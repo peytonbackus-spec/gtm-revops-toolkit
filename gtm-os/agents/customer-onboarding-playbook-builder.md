@@ -23,7 +23,7 @@ Design a customer onboarding playbook from contract signature to first value. Br
 ```
 
 ## Why This Gap Existed
-The single biggest gap found: no onboarding agent existed anywhere in this vault despite it being the foundational CS motion (contract-to-first-value directly drives retention).
+The single biggest gap found: no onboarding agent existed anywhere in this repo despite it being the foundational CS motion (contract-to-first-value directly drives retention).
 
 ## Cross-References
 [account-management-customer-success](../../wiki/skills/account-management-customer-success.md)

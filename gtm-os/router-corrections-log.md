@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # Router Corrections Log
 
-Append-only record of times a routed output was wrong or off-target, per CLAUDE.md's Correction Feedback Loop (section 2a). Each entry documents what failed and what was permanently changed in the vault as a result -- not just the one-off fix to that reply.
+Append-only record of times a routed output was wrong or off-target, per CLAUDE.md's Correction Feedback Loop (section 2a). Each entry documents what failed and what was permanently changed in this repo as a result -- not just the one-off fix to that reply.
 
 ## Format
 ```

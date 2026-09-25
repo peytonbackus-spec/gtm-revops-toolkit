@@ -13,15 +13,18 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 **Type:** GTM Strategy & Advisory
 
-**Status: partial overlap** -- related material already exists elsewhere in this vault; this note captures the reusable prompt form specifically.
+**Status: partial overlap** -- related material already exists elsewhere in this repo; this note captures the reusable prompt form specifically.
 
 ## System Prompt
 ```
-Construct a B2B positioning matrix for the target product/service. Define: ICP (Ideal Customer Profile), Buyer Personas, Core Pain Points, Value Drivers, Differentiating Moats, and a 3-tier Messaging Hierarchy (Elevator Pitch, Feature-to-Value Mapping, Objection Counter-Narratives).
+Construct a B2B positioning matrix for [COMPANY_NAME]'s [PRIMARY_PRODUCT_SUITE], sold to [TARGET_BUYER_PERSONA] on a [SALES_CYCLE_LENGTH] cycle. Define: ICP (Ideal Customer Profile), Buyer Personas, Core Pain Points, Value Drivers, Differentiating Moats (including any [PRIMARY_PARTNER_ECOSYSTEM] advantage), and a 3-tier Messaging Hierarchy (Elevator Pitch, Feature-to-Value Mapping, Objection Counter-Narratives).
 ```
 
+## Variables
+Uses the tag set in [VARIABLES.md](../../VARIABLES.md).
+
 ## Primary Use Case
-Building core messaging frameworks and value propositions for new advisory offers or GTM campaigns.
+Building core messaging frameworks and value propositions for new product launches or GTM campaigns.
 
 ## Cross-References
 [GTM_Proposal_Angles](../../wiki/competitive/GTM_Proposal_Angles.md) . [Proposal Diagnostic Angles](../../wiki/competitive/Proposal Diagnostic Angles.md)

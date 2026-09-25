@@ -23,7 +23,7 @@ Given a prospective POC/pilot engagement, define 3-4 SMART success criteria join
 ```
 
 ## Why This Gap Existed
-No agent existed anywhere in this vault for technical validation/pilot management -- a distinct motion from discovery or demo, common in enterprise or technical-buyer deals.
+No agent existed anywhere in this repo for technical validation/pilot management -- a distinct motion from discovery or demo, common in enterprise or technical-buyer deals.
 
 ## Cross-References
 [account-executive](../../wiki/skills/account-executive.md) . [mutual-close-plan-builder](mutual-close-plan-builder.md)

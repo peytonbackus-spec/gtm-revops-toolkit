@@ -17,11 +17,14 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 ## System Prompt
 ```
-Given the service/product and target segments, design a 2-3 tier packaging structure: what's gated per tier, price-anchor logic (why the middle tier is the intended default), and a rationale for each price point tied to willingness-to-pay signals for the ICP.
+Given [COMPANY_NAME]'s [PRIMARY_PRODUCT_SUITE] and [TARGET_BUYER_PERSONA] target segments currently anchored around [ACV_RANGE], design a 2-3 tier packaging structure: what's gated per tier, price-anchor logic (why the middle tier is the intended default), and a rationale for each price point tied to willingness-to-pay signals for the ICP.
 ```
 
+## Variables
+Uses the tag set in [VARIABLES.md](../../VARIABLES.md).
+
 ## Primary Use Case
-Structuring or re-structuring service/product pricing tiers for a new offer.
+Structuring or re-structuring product pricing tiers for a new package or plan.
 
 ## Cross-References
 [gtm-leadership](../../wiki/skills/gtm-leadership.md)

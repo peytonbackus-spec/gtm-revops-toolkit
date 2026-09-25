@@ -19,11 +19,14 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 ## System Prompt
 ```
-Given the product's price point, buyer complexity, and time-to-value, recommend a primary GTM motion (product-led, sales-led, or hybrid) with the specific triggers that would justify adding the other motion later. Name the org and tooling implications of the recommendation.
+Given [COMPANY_NAME]'s [PRIMARY_PRODUCT_SUITE] at an [ACV_RANGE] price point, a [TARGET_BUYER_PERSONA] buying committee, and a [SALES_CYCLE_LENGTH] time-to-value, recommend a primary GTM motion (product-led, sales-led, or hybrid) with the specific triggers that would justify adding the other motion later. Name the org and tooling implications of the recommendation.
 ```
 
+## Variables
+Uses the tag set in [VARIABLES.md](../../VARIABLES.md).
+
 ## Why This Gap Existed
-A foundational strategic decision GTM leaders make before building any of the other playbooks in this vault -- was assumed implicitly (sales-led) rather than decided explicitly anywhere.
+A foundational strategic decision GTM leaders make before building any of the other playbooks in this repo -- was assumed implicitly (sales-led) rather than decided explicitly anywhere.
 
 ## Cross-References
 [gtm-leadership](../../wiki/skills/gtm-leadership.md) . [pricing-packaging-optimizer](pricing-packaging-optimizer.md)

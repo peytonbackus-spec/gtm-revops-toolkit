@@ -13,7 +13,7 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 **Type:** Utility / Knowledge Management
 
-**Status: already enforced structurally** -- this vault's CLAUDE governance file already requires this behavior of every wiki/ note; this prompt operationalizes it for ad-hoc note conversion.
+**Status: already enforced structurally** -- this repo's CLAUDE governance file already requires this behavior of every wiki/ note; this prompt operationalizes it for ad-hoc note conversion.
 
 ## System Prompt
 ```

@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # Full-Org Skill / Agent / Workflow Taxonomy
 
-> Organized Function -> Purpose -> Priority. Covers all 4 layers this vault now has: **Skills** (`wiki/skills/`), **Agents** (`gtm-os/agents/` -- human-invoked top-level prompts), **Sub-Agents** (`gtm-os/agents/sub-agents/` -- shared single-purpose primitives multiple agents call), and **Workflows/Orchestrations** (`gtm-os/contracts/` -- declared bounded-autonomy automations).
+> Organized Function -> Purpose -> Priority. Covers all 4 layers this repo now has: **Skills** (`wiki/skills/`), **Agents** (`gtm-os/agents/` -- human-invoked top-level prompts), **Sub-Agents** (`gtm-os/agents/sub-agents/` -- shared single-purpose primitives multiple agents call), and **Workflows/Orchestrations** (`gtm-os/contracts/` -- declared bounded-autonomy automations).
 
 ## Workflow/Orchestration Layer
 **4 autonomous Workflow Contracts now exist** in `gtm-os/contracts/`: [pipeline-risk-contract](../../gtm-os/contracts/pipeline-risk-contract.md) (original), plus [inbound-lead-qualifier-contract](../../gtm-os/contracts/inbound-lead-qualifier-contract.md), [speed-to-lead-sla-contract](../../gtm-os/contracts/speed-to-lead-sla-contract.md), and [casl-compliance-gate-contract](../../gtm-os/contracts/casl-compliance-gate-contract.md) (promoted this round). Each declares boundaries, a role_map built from the [shared sub-agents](../../gtm-os/agents/sub-agents/00-Sub-Agent-Layer-Index.md), an evidence standard, and stop_rules. The remaining 49 top-level agents are still human-invoked; next promotion candidate: `/crm-hygiene-auto-updater` (same rules-based, low-ambiguity profile as the 3 already promoted).

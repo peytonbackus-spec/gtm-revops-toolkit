@@ -13,7 +13,7 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 **Type:** Engineering & AI
 
-**Status: strong overlap** -- this vault already has substantial real content covering this; this note exists mainly to file the reusable prompt form itself.
+**Status: strong overlap** -- this repo already has substantial real content covering this; this note exists mainly to file the reusable prompt form itself.
 
 ## System Prompt
 ```

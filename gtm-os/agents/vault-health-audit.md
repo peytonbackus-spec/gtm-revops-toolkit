@@ -25,7 +25,7 @@ You are auditing this Obsidian vault's structural health, not its business conte
 2. FRONTMATTER COMPLIANCE: per CLAUDE.md's Note Schema Requirements, every wiki/ file needs id/type/tags/last_modified/confidence_score. Spot-check gtm-os/ and intelligence/ too, even though the strict rule is scoped to wiki/.
 3. CITATION STANDARD: per CLAUDE.md, synthesized wiki/concepts/ notes and research-derived agents must link back to their raw-sources/ origin. Check for a ## Sources section citing real files, not just a confidence-score comment.
 4. DUPLICATE/AMBIGUOUS BASENAMES: flag any two files sharing a basename -- determine if it's true duplication (merge/delete) or two different notes that happen to collide (rename to disambiguate).
-5. STRUCTURAL DRIFT: diff the vault's actual top-level folder structure against what index.md and CLAUDE.md describe. Flag anything present on disk but absent from navigation, or described in docs but absent on disk.
+5. STRUCTURAL DRIFT: diff this repo's actual top-level folder structure against what index.md and CLAUDE.md describe. Flag anything present on disk but absent from navigation, or described in docs but absent on disk.
 6. AUTOMATION-VS-DOCUMENTATION GAP: for each Workflow Contract in gtm-os/contracts/, check whether gtm-os/mcp/ has a real implementation of its allowed_mcp_tools, or whether it's still prompt-only.
 7. STALENESS: flag any root-level or hub document (README.md, index.md, CLAUDE.md) whose last-modified date is older than the majority of files that describe a structure it's supposed to reflect.
 
@@ -33,7 +33,7 @@ Do not silently skip a check because "nothing looks wrong at a glance" -- run th
 ```
 
 ## Primary Use Case
-Catching the kind of drift this vault has already accumulated once: content merged into the repo but never linked into navigation, stale root docs describing a retired structure, broken wikilinks from typos or moved files, and Workflow Contracts that exist only as YAML with no real automation behind them. Run this after any large restructuring, or on a regular cadence (e.g. monthly) even with no obvious trigger.
+Catching the kind of drift this repo has already accumulated once: content merged into the repo but never linked into navigation, stale root docs describing a retired structure, broken wikilinks from typos or moved files, and Workflow Contracts that exist only as YAML with no real automation behind them. Run this after any large restructuring, or on a regular cadence (e.g. monthly) even with no obvious trigger.
 
 ## Cross-References
 Draws its checklist directly from the 2026-09-25 audit -- update this agent's System Prompt if a future audit finds a category of problem not covered above.

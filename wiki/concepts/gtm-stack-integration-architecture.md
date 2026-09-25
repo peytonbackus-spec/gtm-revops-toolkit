@@ -23,12 +23,12 @@ Larger orgs add a **warehouse layer** (Snowflake/BigQuery) + dbt + reverse ETL (
 1. **Deterministic (REST API)** — scheduled, repeatable: fixed filters, enrichment steps, syncs. Example: Monday 6am outbound list build with verified-contact routing to sequencer.
 2. **Agentic (MCP)** — interactive/adaptive: a model reviews returned data and adjusts filters or enrichment scope mid-run.
 
-**The practical handoff GTM engineers use:** design and debug interactively via an agent/copilot first, then convert the settled workflow into a scheduled deterministic API job for production. This mirrors this vault's own `gtm-os/` layer intent — [GTM_OS_Architecture_Spec](GTM_OS_Architecture_Spec.md) describes exactly this kind of orchestration but only [pipeline-risk-contract](../../gtm-os/contracts/pipeline-risk-contract.md) exists as an actual declared contract so far.
+**The practical handoff GTM engineers use:** design and debug interactively via an agent/copilot first, then convert the settled workflow into a scheduled deterministic API job for production. This mirrors this repo's own `gtm-os/` layer intent — [GTM_OS_Architecture_Spec](GTM_OS_Architecture_Spec.md) describes exactly this kind of orchestration but only [pipeline-risk-contract](../../gtm-os/contracts/pipeline-risk-contract.md) exists as an actual declared contract so far.
 
 ## The Core Connection Pattern (signal → CRM)
 Enrichment wired into CRM → playbook listens for a trigger (funding announcement, form submission, engagement signal) → filter against ICP → multi-provider enrichment **waterfall** (not single-source) → score the account → queue into sequencer or reverse-ETL back to CRM.
 
-This is the same shape as [l2a_matching_engine](../../core/engine/l2a_matcher.py) (domain + fuzzy company matching) feeding into [meddpicc_health_engine](../../gtm-os/code/scoring/meddpicc_health_engine.md) scoring already built in this vault.
+This is the same shape as [l2a_matching_engine](../../core/engine/l2a_matcher.py) (domain + fuzzy company matching) feeding into [meddpicc_health_engine](../../gtm-os/code/scoring/meddpicc_health_engine.md) scoring already built in this repo.
 
 ## Reverse ETL vs. iPaaS — the decision that actually matters
 | | iPaaS (n8n, Zapier, Workato, Tray) | Reverse ETL (Hightouch, Census) |
@@ -51,7 +51,7 @@ This is the same shape as [l2a_matching_engine](../../core/engine/l2a_matcher.py
 ## Rollout Sequence (for building this from scratch)
 1. **Weeks 1-4:** canonical data model, identity graph, declare systems-of-record
 2. **Weeks 5-8:** source ingestion, dbt models, first reverse-ETL activation
-3. **Weeks 9-12:** scoring/health models go live (PQL, churn — this vault already has [churn_prediction_pipeline](../../gtm-os/code/scoring/churn_prediction_pipeline.md) and [meddpicc_health_engine](../../gtm-os/code/scoring/meddpicc_health_engine.md) built for this stage)
+3. **Weeks 9-12:** scoring/health models go live (PQL, churn — this repo already has [churn_prediction_pipeline](../../gtm-os/code/scoring/churn_prediction_pipeline.md) and [meddpicc_health_engine](../../gtm-os/code/scoring/meddpicc_health_engine.md) built for this stage)
 4. **Weeks 13-16:** enablement, operating rituals (weekly pipeline review, monthly QBR on shared metrics)
 
 ## Sources
