@@ -17,7 +17,7 @@ bounded_autonomy_note: human-invoked utility prompt, not an autonomous backgroun
 
 ## System Prompt
 ```
-Write a modular Zsh shell script or CLI command set to automate the requested local development or note management task. Include command-line argument parsing, error checking, colored status logs, and alias registration for `~/.zshrc`.
+Write a modular Zsh shell script or CLI command set to automate the requested local development or workflow automation task. Include command-line argument parsing, error checking, colored status logs, and alias registration for `~/.zshrc`.
 ```
 
 ## Primary Use Case
