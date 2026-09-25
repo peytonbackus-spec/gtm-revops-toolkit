@@ -64,6 +64,8 @@ flowchart TD
 
 ```text
 gtm-revops-toolkit/
+├── core/                    # Real, tested engines: rules/waterfall enrichment, L2A matching, webhook API
+├── config/                  # Enrichment waterfall + rules YAML config
 ├── modules/
 │   ├── gtm_engineering/
 │   │   ├── ai_agents/
@@ -76,7 +78,11 @@ gtm-revops-toolkit/
 │   │       └── rfp_pipeline_spec.md
 │   └── salesops/
 │       └── capacity_planning/
-└── templates/
+├── gtm-os/                  # Prompt/agent library, Workflow Contracts, MCP automation (see below)
+├── wiki/                    # Role-competency skills, tool intelligence, synthesized research
+├── raw-sources/             # Immutable research citations backing wiki/ notes
+├── tests/                   # pytest suite for core/
+└── Templates/
     └── architecture_diagrams/
         └── gtm_revops_architecture.png
 ```
@@ -104,4 +110,13 @@ cd gtm-revops-toolkit
 
 # Run deal health scoring model example
 python3 modules/gtm_engineering/deal_scoring/pipeline_health_model.py
+```
+
+### Local Development
+
+```bash
+make test        # run the core/ pytest suite
+make lint        # ruff check
+make run-webhook # start the FastAPI enrichment webhook (core/api/webhook.py)
+make run-mcp     # start the speed-to-lead-sla MCP server proof of concept
 ```

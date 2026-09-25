@@ -15,7 +15,7 @@ lint:
 	ruff check core/ tests/
 
 run-mcp:
-	python3 -m core.mcp.server
+	python3 gtm-os/mcp/speed-to-lead/speed_to_lead_server.py
 
 run-webhook:
 	uvicorn core.api.webhook:app --reload --port 8000
