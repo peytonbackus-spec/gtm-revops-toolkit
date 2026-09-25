@@ -5,7 +5,6 @@ tags:
   - gtm/dashboard
 id: gtm-intelligence-overview
 last_modified: 2026-09-25
-migrated_from: obsidian-orphaned-vault
 ---
 
 
@@ -21,11 +20,11 @@ SORT category ASC, tool ASC
 
 **Static fallback (in case Dataview is disabled or the tag query breaks silently -- this table found a real bug: the query above had its code fence backslash-escaped and was never actually rendering until the 2026-09-25 audit fixed it):**
 
-[6sense](tools/6sense.md) . [ActiveCampaign](tools/ActiveCampaign.md) . [Aloware](tools/Aloware.md) . Apollo
+[6sense](tools/6sense.md) . [ActiveCampaign](tools/ActiveCampaign.md) . [Aloware](tools/Aloware.md) . [Apollo.io](tools/Apollo.io.md)
 
 [Avoma](tools/Avoma.md) . [Chili Piper](tools/Chili Piper.md) . [Clay](tools/Clay.md) . [Clearbit](tools/Clearbit.md)
 
-[Cognism](tools/Cognism.md) . Customer . [Demandbase](tools/Demandbase.md) . [Gong](tools/Gong.md)
+[Cognism](tools/Cognism.md) . [Customer.io](tools/Customer.io.md) . [Demandbase](tools/Demandbase.md) . [Gong](tools/Gong.md)
 
 [HubSpot Marketing Hub](tools/HubSpot Marketing Hub.md) . [HubSpot](tools/HubSpot.md) . [Lusha](tools/Lusha.md) . [Marketo](tools/Marketo.md)
 

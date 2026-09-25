@@ -5,7 +5,6 @@ tags:
 id: gtm-proposal-angles
 type: positioning-playbook
 last_modified: 2026-09-25
-migrated_from: obsidian-orphaned-vault
 ---
 
 
