@@ -193,10 +193,10 @@ last_modified: 2026-09-25
 - P1 — /mcp-server-spec — [MCP Tool/Server Definition Writer](../../gtm-os/agents/mcp-server-spec.md)
 
 **Purpose: Knowledge Management**
-- P2 — /obsidian-format — [Note Sanitizer & Wikilink Engine](../../gtm-os/agents/obsidian-format.md)
+- P2 — /obsidian-format — [Note Sanitizer & Repo-Link Converter](../../gtm-os/agents/obsidian-format.md)
 
-**Purpose: Vault Governance & Maintenance**
-- P1 — /vault-health-audit — [Vault Structural Health Auditor](../../gtm-os/agents/vault-health-audit.md) -- net-new, built from the 2026-09-25 audit
+**Purpose: Repo Governance & Maintenance**
+- P1 — /vault-health-audit — [Repo Structural Health Auditor](../../gtm-os/agents/vault-health-audit.md) -- net-new, built from the 2026-09-25 audit
 
 ## Priority Legend
 - **P0** — highest leverage / build or use first (time-sensitive, high-frequency, revenue- or compliance-critical)
@@ -207,4 +207,4 @@ last_modified: 2026-09-25
 [The Default 9 RevOps Jobs](../../raw-sources/articles/full-org-agent-research/01-default-9-revops-jobs.md) . [Mutual Close Plan Research](../../raw-sources/articles/full-org-agent-research/02-mutual-close-plan.md) . [CS Playbook Framework](../../raw-sources/articles/full-org-agent-research/03-cs-playbook-framework.md)
 
 ## See Also
-[00-Prompt-Library-Index](../../gtm-os/agents/00-Prompt-Library-Index.md) . [Sub-Agent Layer](../../gtm-os/agents/sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](gtm-stack-integration-architecture.md)
+[00-Prompt-Library-Index](../../gtm-os/agents/00-Prompt-Library-Index.md) . [Sub-Agent Layer](../../gtm-os/agents/sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](gtm-stack-integration-architecture.md) . [README](../../README.md)

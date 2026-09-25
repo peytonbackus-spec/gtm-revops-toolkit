@@ -41,4 +41,4 @@ ORDER BY pipeline_value DESC;
 - [ ] Week 6: Handoff docs + team training
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index · [gtm-stack-integration-architecture](../concepts/gtm-stack-integration-architecture.md) · [gtm-tool-data-models](../concepts/gtm-tool-data-models.md)
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md) · [gtm-stack-integration-architecture](../concepts/gtm-stack-integration-architecture.md) · [gtm-tool-data-models](../concepts/gtm-tool-data-models.md)

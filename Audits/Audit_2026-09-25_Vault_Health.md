@@ -68,4 +68,4 @@ The L4 Intelligence layer's only real content is two log files (`decision-log.md
 This exact audit is a repeatable job -- recommend codifying it as a new P1 Cross-Functional agent, `/vault-health-audit`, that runs this link-graph + frontmatter + staleness scan on demand (or could later be scheduled). Would prevent this kind of drift from re-accumulating silently.
 
 ## See Also
-index . CLAUDE . Router Corrections Log . full-org-agent-taxonomy
+[README](../README.md) . [CLAUDE](../CLAUDE.md) . [router-corrections-log](../gtm-os/router-corrections-log.md) . [full-org-agent-taxonomy](../wiki/concepts/full-org-agent-taxonomy.md)

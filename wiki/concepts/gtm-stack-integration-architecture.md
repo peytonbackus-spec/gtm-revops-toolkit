@@ -17,7 +17,7 @@ last_modified: 2026-09-25
 | Orchestration | Scheduling & agents | n8n, Zapier, MCP servers |
 | Analytics | Attribution/reporting | Gong, Dreamdata, warehouse |
 
-Larger orgs add a **warehouse layer** (Snowflake/BigQuery) + dbt + reverse ETL (Hightouch/Census) underneath all of this — see [Warehouse-Centric Architecture](../../raw-sources/articles/gtm-integration-research/07-lead-bypass-debate.md) below.
+Larger orgs add a **warehouse layer** (Snowflake/BigQuery) + dbt + reverse ETL (Hightouch/Census) underneath all of this — see [Reverse ETL vs. iPaaS](../../raw-sources/articles/gtm-integration-research/06-reverse-etl-vs-ipaas.md) below.
 
 ## Two Workflow Patterns
 1. **Deterministic (REST API)** — scheduled, repeatable: fixed filters, enrichment steps, syncs. Example: Monday 6am outbound list build with verified-contact routing to sequencer.
@@ -58,7 +58,7 @@ This is the same shape as [l2a_matching_engine](../../core/engine/l2a_matcher.py
 [Cleanlist: GTM Engineering](../../raw-sources/articles/gtm-integration-research/01-cleanlist-gtm-engineering.md) . [Outreach<->Salesforce Config](../../raw-sources/articles/gtm-integration-research/02-outreach-salesforce-config.md) . [Orum Integrations](../../raw-sources/articles/gtm-integration-research/03-orum-integrations.md) . [AriseGTM Blueprint](../../raw-sources/articles/gtm-integration-research/04-arisegtm-blueprint.md) . [Clay/HubSpot/Salesforce Mapping](../../raw-sources/articles/gtm-integration-research/05-clay-hubspot-salesforce-mapping.md) . [Reverse ETL vs. iPaaS](../../raw-sources/articles/gtm-integration-research/06-reverse-etl-vs-ipaas.md) . [Lead-Bypass Debate](../../raw-sources/articles/gtm-integration-research/07-lead-bypass-debate.md)
 
 ## See Also
-[gtm-tool-data-models](gtm-tool-data-models.md) · [revops-engineering](../skills/revops-engineering.md) · [GTM_OS_Architecture_Spec](GTM_OS_Architecture_Spec.md) · [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) · index
+[gtm-tool-data-models](gtm-tool-data-models.md) · [revops-engineering](../skills/revops-engineering.md) · [GTM_OS_Architecture_Spec](GTM_OS_Architecture_Spec.md) · [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) · [README](../../README.md)
 
 ## Sources
 - [What is GTM Engineering? (Cleanlist)](https://www.cleanlist.ai/blog/2026-05-22-what-is-gtm-engineering)

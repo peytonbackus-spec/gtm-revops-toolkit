@@ -25,4 +25,4 @@ Functional competencies across GTM/RevOps/Sales roles. Notes grounded in real va
 - [ai-agentic-workflows](ai-agentic-workflows.md)
 - [data-pipeline-analytics](data-pipeline-analytics.md)
 
-Linked from: index
+Linked from: [00-Prompt-Library-Index](../../gtm-os/agents/00-Prompt-Library-Index.md) and most of the agents that reference these skills

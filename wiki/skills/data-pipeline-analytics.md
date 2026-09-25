@@ -29,4 +29,4 @@ def scalable(df):    # parameterize rules, log rejects for review
 - [ ] Scalability notes: what breaks at 10x the row count
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md)

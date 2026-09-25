@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # Pipeline Risk Agent -- Workflow Contract
 
-Companion note for `pipeline-risk-contract.yaml` -- exists so `[pipeline-risk-contract](pipeline-risk-contract.md)` wikilinks resolve (bare wikilinks only match `.md` notes, so the real YAML was previously unreachable from Obsidian's graph/search).
+Companion note for `pipeline-risk-contract.yaml` -- gives the YAML contract a markdown page so other notes can link to it with a real relative link instead of a bare filename.
 
 **Real file:** `gtm-os/contracts/pipeline-risk-contract.yaml`
 

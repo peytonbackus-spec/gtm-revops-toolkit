@@ -3,7 +3,7 @@ id: agent-vault-health-audit
 type: prompt-agent
 tags: [prompt-library, cross-functional-engineering-utility]
 function: Cross-Functional/Engineering & Utility
-purpose: Vault Governance & Maintenance
+purpose: Repo Governance & Maintenance
 priority: P1
 last_modified: 2026-09-25
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule

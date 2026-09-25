@@ -35,4 +35,4 @@ Mirrors [meddpicc_health_engine](../../gtm-os/code/scoring/meddpicc_health_engin
 - [ ] Deal health score recalculated after each material stage change
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index · [sales-leadership](sales-leadership.md)
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md) · [sales-leadership](sales-leadership.md)

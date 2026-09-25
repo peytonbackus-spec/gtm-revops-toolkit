@@ -28,4 +28,4 @@ headcount, current stack].
 - [ ] Kickoff call scheduled with clear success criteria
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md)

@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # Account Churn Risk & Retention Intelligence Engine
 
-Companion note for `churn_prediction_pipeline.py` -- resolves `[churn_prediction_pipeline](churn_prediction_pipeline.md)` wikilinks and points to the real implementation.
+Companion note for `churn_prediction_pipeline.py` -- gives the script a markdown page so other notes can link to it with a real relative link instead of a bare filename, and points to the real implementation.
 
 **Real file:** `gtm-os/code/scoring/churn_prediction_pipeline.py`
 

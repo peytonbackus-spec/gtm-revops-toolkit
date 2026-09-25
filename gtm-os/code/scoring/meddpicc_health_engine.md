@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # MEDDPICC Health & Risk Calculation Engine
 
-Companion note for `meddpicc_health_engine.py` -- exists so `[meddpicc_health_engine](meddpicc_health_engine.md)` wikilinks resolve in Obsidian (bare links only match `.md` notes) and so the real implementation is one click from every agent/skill that describes its logic.
+Companion note for `meddpicc_health_engine.py` -- gives the script a markdown page so every agent/skill that describes its logic can link to the real implementation with a real relative link.
 
 **Real file:** `gtm-os/code/scoring/meddpicc_health_engine.py`
 

@@ -53,7 +53,7 @@ Clay supports 3 sync models:
 [Cleanlist: GTM Engineering](../../raw-sources/articles/gtm-integration-research/01-cleanlist-gtm-engineering.md) . [Outreach<->Salesforce Config](../../raw-sources/articles/gtm-integration-research/02-outreach-salesforce-config.md) . [Orum Integrations](../../raw-sources/articles/gtm-integration-research/03-orum-integrations.md) . [AriseGTM Blueprint](../../raw-sources/articles/gtm-integration-research/04-arisegtm-blueprint.md) . [Clay/HubSpot/Salesforce Mapping](../../raw-sources/articles/gtm-integration-research/05-clay-hubspot-salesforce-mapping.md) . [Reverse ETL vs. iPaaS](../../raw-sources/articles/gtm-integration-research/06-reverse-etl-vs-ipaas.md) . [Lead-Bypass Debate](../../raw-sources/articles/gtm-integration-research/07-lead-bypass-debate.md)
 
 ## See Also
-[gtm-stack-integration-architecture](gtm-stack-integration-architecture.md) · [account-executive](../skills/account-executive.md) · [revops-engineering](../skills/revops-engineering.md) · [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) · index
+[gtm-stack-integration-architecture](gtm-stack-integration-architecture.md) · [account-executive](../skills/account-executive.md) · [revops-engineering](../skills/revops-engineering.md) · [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) · [README](../../README.md)
 
 ## Sources
 - [Salesforce Configuration for Outreach](https://support.outreach.io/hc/en-us/articles/13056326486427-Salesforce-Configuration-for-Outreach-End-to-End-Guide-Best-Practice)

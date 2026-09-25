@@ -32,4 +32,4 @@ executive summary in plain, non-jargon language for a non-technical buyer.
 - [ ] Delivered on agreed turnaround
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md)

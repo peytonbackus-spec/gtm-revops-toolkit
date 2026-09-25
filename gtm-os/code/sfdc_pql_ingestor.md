@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # PQL Ingestion Engine
 
-Companion note for `sfdc_pql_ingestor.py` -- resolves `[sfdc_pql_ingestor](sfdc_pql_ingestor.md)` wikilinks.
+Companion note for `sfdc_pql_ingestor.py` -- gives the script a markdown page so other notes can link to it with a real relative link instead of a bare filename.
 
 **Real file:** `gtm-os/code/sfdc_pql_ingestor.py`
 

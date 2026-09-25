@@ -41,12 +41,14 @@ The GTM Operating System acts as a unified revenue orchestration framework linki
 
 ## 3. Automation Modules
 
-- **PQL Ingestion**: `30_Resources/Code/sfdc_pql_ingestor.py`
-- **Lead-to-Account Matching**: `30_Resources/Code/orchestrators/l2a_matching_engine.py`
-- **MEDDPICC Risk Scoring**: `30_Resources/Code/scoring/meddpicc_health_engine.py`
-- **Churn Prediction**: `30_Resources/Code/scoring/churn_prediction_pipeline.py`
-- **Tech Debt Audit**: `30_Resources/Code/revops_tech_debt_tracker.py`
-- **Attribution Engine**: `30_Resources/Code/attribution/w_shaped_attribution.sql`
+Moved from the legacy `30_Resources/Code/` PARA location into the tracked `gtm-os/code/` architecture during the 2026-09-25 audit -- see [00-Code-Index](../../gtm-os/code/00-Code-Index.md) for the authoritative, kept-current list. Current locations:
+
+- **PQL Ingestion**: [`gtm-os/code/sfdc_pql_ingestor.py`](../../gtm-os/code/sfdc_pql_ingestor.py)
+- **Lead-to-Account Matching**: [`core/engine/l2a_matcher.py`](../../core/engine/l2a_matcher.py)
+- **MEDDPICC Risk Scoring**: [`gtm-os/code/scoring/meddpicc_health_engine.py`](../../gtm-os/code/scoring/meddpicc_health_engine.py)
+- **Churn Prediction**: [`gtm-os/code/scoring/churn_prediction_pipeline.py`](../../gtm-os/code/scoring/churn_prediction_pipeline.py)
+- **Tech Debt Audit**: [`gtm-os/code/revops_tech_debt_tracker.py`](../../gtm-os/code/revops_tech_debt_tracker.py)
+- **Attribution Engine**: not yet built (`w_shaped_attribution.sql` was referenced in the pre-consolidation manifest but never actually written -- see [00-Code-Index](../../gtm-os/code/00-Code-Index.md)'s note on this)
 
 ## See Also
 [00-Code-Index](../../gtm-os/code/00-Code-Index.md) . [full-org-agent-taxonomy](full-org-agent-taxonomy.md) . [gtm-stack-integration-architecture](gtm-stack-integration-architecture.md)

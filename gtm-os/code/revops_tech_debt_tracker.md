@@ -7,7 +7,7 @@ last_modified: 2026-09-25
 
 # RevOps Schema Tech Debt & Metadata Governance Auditor
 
-Companion note for `revops_tech_debt_tracker.py` -- resolves `[revops_tech_debt_tracker](revops_tech_debt_tracker.md)` wikilinks.
+Companion note for `revops_tech_debt_tracker.py` -- gives the script a markdown page so other notes can link to it with a real relative link instead of a bare filename.
 
 **Real file:** `gtm-os/code/revops_tech_debt_tracker.py`
 

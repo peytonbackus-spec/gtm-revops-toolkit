@@ -24,4 +24,4 @@ last_modified: 2026-09-25
 - [ ] Baseline reply/booked-meeting rate captured before iterating
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index · [sales-development-leadership](sales-development-leadership.md) (team management vs. this note's IC tactics)
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md) · [sales-development-leadership](sales-development-leadership.md) (team management vs. this note's IC tactics)

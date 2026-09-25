@@ -29,4 +29,4 @@ breakdown with the top 3 risk factors called out by name.
 - [ ] Board/exec summary drafted in plain-language, one page
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index · [gtm-leadership](gtm-leadership.md) · [sales-development-leadership](sales-development-leadership.md) · [account-executive](account-executive.md)
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md) · [gtm-leadership](gtm-leadership.md) · [sales-development-leadership](sales-development-leadership.md) · [account-executive](account-executive.md)

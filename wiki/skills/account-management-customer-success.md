@@ -30,4 +30,4 @@ Mirrors [churn_prediction_pipeline](../../gtm-os/code/scoring/churn_prediction_p
 - [ ] Expansion opportunity assessed if account is healthy (WAU stable/growing, sponsor engaged)
 
 ## See Also
-[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · index · [revops-engineering](revops-engineering.md)
+[_Skill_Matrix_Hub](_Skill_Matrix_Hub.md) · [README](../../README.md) · [revops-engineering](revops-engineering.md)

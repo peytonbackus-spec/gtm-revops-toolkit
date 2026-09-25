@@ -16,4 +16,4 @@ Immutable research captures per CLAUDE.md's Operating Rules ("never modify files
 - `notes/`, `pdfs/`, `transcripts/` -- reserved for future captures of those types; empty today.
 
 ## See Also
-index . CLAUDE . Vault Health Audit
+[README](../README.md) . [CLAUDE](../CLAUDE.md) . [Audit_2026-09-25_Vault_Health](../Audits/Audit_2026-09-25_Vault_Health.md)
