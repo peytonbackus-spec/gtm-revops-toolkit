@@ -10,9 +10,14 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from scoring.meddpicc_health_engine import MEDDPICCHealthEngine
-from orchestrators.l2a_matching_engine import LeadToAccountMatcher
 from scoring.churn_prediction_pipeline import AccountChurnPredictor
 from revops_tech_debt_tracker import RevOpsTechDebtAuditor
+
+# NOTE: lead-to-account matching is intentionally NOT tested here. This
+# repo's real L2A matcher lives at core/engine/l2a_matcher.py (a more
+# mature implementation than any gtm-os/code/ stand-in would be -- see
+# gtm-os/code/00-Code-Index.md's redirect note) and is already covered
+# by tests/test_l2a_matcher.py.
 
 class TestRevOpsToolkit(unittest.TestCase):
     def test_meddpicc_health_engine(self):
@@ -26,13 +31,6 @@ class TestRevOpsToolkit(unittest.TestCase):
         res = MEDDPICCHealthEngine.calculate_deal_health(sample_opp)
         self.assertGreaterEqual(res['health_score'], 80)
         self.assertTrue(res['qualified_for_stage_4'])
-
-    def test_l2a_matching_exact(self):
-        accounts = [{'id': '001ABC', 'name': 'Acme Corp', 'domain': 'acme.com'}]
-        matcher = LeadToAccountMatcher(accounts)
-        res = matcher.match_lead({'email': 'test@acme.com', 'company': 'Acme'})
-        self.assertTrue(res['matched'])
-        self.assertEqual(res['match_type'], 'EXACT_DOMAIN')
 
     def test_churn_prediction_critical(self):
         telemetry = {
