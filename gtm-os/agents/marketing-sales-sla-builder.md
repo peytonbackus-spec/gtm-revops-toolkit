@@ -6,7 +6,6 @@ function: GTM Strategy & Leadership
 purpose: Cross-Functional Alignment
 priority: P1
 last_modified: 2026-09-25
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -30,4 +29,4 @@ This entire vault is sales/RevOps-focused with no marketing-alignment agent -- t
 [lead-scoring](lead-scoring.md) . [inbound-lead-qualifier](inbound-lead-qualifier.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [Sub-Agent Layer](sub-agents/00-Sub-Agent-Layer-Index.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [Sub-Agent Layer](sub-agents/00-Sub-Agent-Layer-Index.md)

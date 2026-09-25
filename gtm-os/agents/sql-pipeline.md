@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: RevOps
 purpose: Reporting
 priority: P1
-confidence_score: 0.5
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Extracting revenue performance metrics from analytical databases or BI platforms
 [data-pipeline-analytics](../../wiki/skills/data-pipeline-analytics.md) . [revops-engineering](../../wiki/skills/revops-engineering.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

@@ -3,7 +3,6 @@ id: raw-sources-index
 type: hub
 tags: [hub, raw-sources]
 last_modified: 2026-09-25
-confidence_score: 0.5
 ---
 
 # Raw Sources Index (L1 Capture)

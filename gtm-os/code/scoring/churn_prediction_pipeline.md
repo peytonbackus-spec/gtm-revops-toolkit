@@ -3,7 +3,6 @@ id: code-churn-prediction-pipeline
 type: code-index
 tags: [code, revops-engineering, churn]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # Account Churn Risk & Retention Intelligence Engine

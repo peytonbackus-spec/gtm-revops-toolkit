@@ -3,7 +3,6 @@ id: skill-account-executive
 type: skill
 tags: [skill, account-executive, meddpicc, closing]
 last_modified: 2026-09-25
-confidence_score: 0.55
 ---
 
 # Account Executive

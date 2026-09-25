@@ -4,7 +4,6 @@ type: manifest
 tags: [hub, code, revops-engineering]
 status: active
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # GTM OS -- Code Index

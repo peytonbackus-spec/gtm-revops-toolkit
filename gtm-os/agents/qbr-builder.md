@@ -6,7 +6,6 @@ function: Customer Success
 purpose: Adoption & Retention
 priority: P1
 last_modified: 2026-09-25
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -30,4 +29,4 @@ Promotes the inline QBR prompt already sketched in the AM/CS skill note into its
 [account-management-customer-success](../../wiki/skills/account-management-customer-success.md) . [churn_prediction_pipeline](../code/scoring/churn_prediction_pipeline.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md)

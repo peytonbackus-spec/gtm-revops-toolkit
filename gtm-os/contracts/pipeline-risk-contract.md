@@ -3,7 +3,6 @@ id: contract-pipeline-risk
 type: contract-index
 tags: [contract, workflow-contract, revops]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # Pipeline Risk Agent -- Workflow Contract

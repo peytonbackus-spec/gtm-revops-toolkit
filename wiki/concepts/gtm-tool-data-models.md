@@ -3,7 +3,6 @@ id: gtm-tool-data-models
 type: concept
 tags: [concept, data-model, fields, objects]
 last_modified: 2026-09-25
-confidence_score: 0.7
 ---
 
 # GTM Tool Data Models — Objects, Fields & Relationships

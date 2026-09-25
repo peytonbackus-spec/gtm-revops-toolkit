@@ -6,7 +6,6 @@ function: Cross-Functional/Engineering & Utility
 purpose: Vault Governance & Maintenance
 priority: P1
 last_modified: 2026-09-25
-confidence_score: 0.6
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -40,4 +39,4 @@ Catching the kind of drift this vault has already accumulated once: content merg
 Draws its checklist directly from the 2026-09-25 audit -- update this agent's System Prompt if a future audit finds a category of problem not covered above.
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [00-Agent-Router](00-Agent-Router.md) . vault-audit-2026-09-25 . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [00-Agent-Router](00-Agent-Router.md) . vault-audit-2026-09-25

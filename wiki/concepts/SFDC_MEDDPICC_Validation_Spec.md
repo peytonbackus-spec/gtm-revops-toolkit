@@ -3,7 +3,6 @@ id: sfdc-meddpicc-validation-spec
 type: spec
 tags: [wiki/concepts, revops-engineering, meddpicc, salesforce]
 last_modified: 2026-09-25
-confidence_score: 0.6
 ---
 
 # Salesforce MEDDPICC Custom Fields & Validation Rules Spec

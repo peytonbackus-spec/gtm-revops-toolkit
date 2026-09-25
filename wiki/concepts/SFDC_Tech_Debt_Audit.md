@@ -3,7 +3,6 @@ id: sfdc-tech-debt-audit
 type: spec
 tags: [wiki/concepts, revops-engineering, schema-governance, salesforce]
 last_modified: 2026-09-25
-confidence_score: 0.6
 ---
 
 # Salesforce Schema Tech Debt Audit Report

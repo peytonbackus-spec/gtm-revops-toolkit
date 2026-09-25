@@ -3,7 +3,6 @@ id: agent-router
 type: hub
 tags: [hub, router, routing-table]
 last_modified: 2026-09-25
-confidence_score: 0.5
 ---
 
 # Agent Router -- Lookup Table
@@ -117,4 +116,4 @@ Routing reference for the Router Protocol in CLAUDE.md: given a plain-language r
 | [Sub-Agent: Usage Data Summarizer](sub-agents/usage-data-summarizer.md) | Condense raw product usage/telemetry data into a health-relevant summary: trend direction, adoption breadth across the buying committee,... |
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [Sub-Agent Layer](sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [Sub-Agent Layer](sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

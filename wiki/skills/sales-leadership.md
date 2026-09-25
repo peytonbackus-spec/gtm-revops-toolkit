@@ -3,7 +3,6 @@ id: skill-sales-leadership
 type: skill
 tags: [skill, sales-leadership, forecasting, comp-design]
 last_modified: 2026-09-25
-confidence_score: 0.4
 ---
 
 # Sales Leadership

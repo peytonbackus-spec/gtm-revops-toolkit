@@ -3,7 +3,6 @@ id: skill-gtm-leadership
 type: skill
 tags: [skill, gtm-leadership, pricing, positioning]
 last_modified: 2026-09-25
-confidence_score: 0.4
 ---
 
 # GTM Leadership

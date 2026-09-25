@@ -6,7 +6,6 @@ function: GTM Strategy & Leadership
 purpose: Strategic Planning
 priority: P1
 last_modified: 2026-09-25
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -30,4 +29,4 @@ A foundational strategic decision GTM leaders make before building any of the ot
 [gtm-leadership](../../wiki/skills/gtm-leadership.md) . [pricing-packaging-optimizer](pricing-packaging-optimizer.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md)

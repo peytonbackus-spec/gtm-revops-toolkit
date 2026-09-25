@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: Customer Success
 purpose: Renewal
 priority: P0
-confidence_score: 0.4
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Distinct from reactive churn scoring (see churn_prediction_pipeline) -- this is 
 [account-management-customer-success](../../wiki/skills/account-management-customer-success.md) . [churn_prediction_pipeline](../code/scoring/churn_prediction_pipeline.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

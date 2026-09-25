@@ -3,7 +3,6 @@ id: automation-layer-index
 type: hub
 tags: [hub, mcp, automation]
 last_modified: 2026-09-25
-confidence_score: 0.5
 ---
 
 # Automation Layer Index (gtm-os/mcp/)

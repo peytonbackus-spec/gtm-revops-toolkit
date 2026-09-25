@@ -3,7 +3,6 @@ id: skill-revops-engineering
 type: skill
 tags: [skill, revops, hubspot, salesforce, automation]
 last_modified: 2026-09-25
-confidence_score: 0.4
 ---
 
 # RevOps Engineering

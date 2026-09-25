@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: Outbound SDR
 purpose: Targeting
 priority: P0
-confidence_score: 0.4
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Quantifying target account profiles before launching outbound pipeline generatio
 [sales-development-strategy](../../wiki/skills/sales-development-strategy.md) . [l2a_matching_engine](../../core/engine/l2a_matcher.py)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

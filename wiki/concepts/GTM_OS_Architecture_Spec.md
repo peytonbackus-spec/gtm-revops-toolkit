@@ -3,7 +3,6 @@ id: gtm-os-architecture-spec
 type: spec
 tags: [wiki/concepts, revops-engineering, architecture]
 last_modified: 2026-09-25
-confidence_score: 0.6
 ---
 
 # Enterprise GTM Operating System Architecture Spec

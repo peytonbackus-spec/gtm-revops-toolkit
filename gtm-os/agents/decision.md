@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: Cross-Functional / Engineering & Utility
 purpose: Strategic Decisions
 priority: P1
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Evaluating vendor tool choices (e.g., Clay + Apollo vs. ZoomInfo + Outreach) or 
 [gtm-stack-integration-architecture](../../wiki/concepts/gtm-stack-integration-architecture.md) . [tech-stack-audit](tech-stack-audit.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

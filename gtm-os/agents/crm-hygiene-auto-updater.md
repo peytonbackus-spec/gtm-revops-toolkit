@@ -6,7 +6,6 @@ function: RevOps
 purpose: Data Quality
 priority: P1
 last_modified: 2026-09-25
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -30,4 +29,4 @@ One of the highest-frequency real RevOps automation jobs (keeping CRM records cu
 [gtm-tool-data-models](../../wiki/concepts/gtm-tool-data-models.md) . [revops-schema](revops-schema.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md)

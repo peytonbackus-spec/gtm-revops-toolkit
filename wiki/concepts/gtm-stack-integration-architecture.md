@@ -3,7 +3,6 @@ id: gtm-stack-integration-architecture
 type: concept
 tags: [concept, architecture, integration, orchestration]
 last_modified: 2026-09-25
-confidence_score: 0.7
 ---
 
 # GTM Stack Integration & Orchestration Architecture

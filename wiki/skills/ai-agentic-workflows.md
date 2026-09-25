@@ -3,7 +3,6 @@ id: skill-ai-agentic-workflows
 type: skill
 tags: [skill, ai, agentic, mcp, claude]
 last_modified: 2026-09-25
-confidence_score: 0.45
 ---
 
 # AI & Agentic Workflows

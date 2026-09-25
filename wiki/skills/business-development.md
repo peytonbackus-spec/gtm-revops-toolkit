@@ -3,7 +3,6 @@ id: skill-business-development
 type: skill
 tags: [skill, business-development, contracts, sow]
 last_modified: 2026-09-25
-confidence_score: 0.4
 ---
 
 # Business Development

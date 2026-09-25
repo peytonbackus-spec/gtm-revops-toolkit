@@ -3,7 +3,6 @@ id: code-sfdc-pql-ingestor
 type: code-index
 tags: [code, revops-engineering, pql]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # PQL Ingestion Engine

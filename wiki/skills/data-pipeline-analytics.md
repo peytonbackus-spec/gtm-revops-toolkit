@@ -3,7 +3,6 @@ id: skill-data-pipeline-analytics
 type: skill
 tags: [skill, data, sql, python, analytics]
 last_modified: 2026-09-25
-confidence_score: 0.4
 ---
 
 # Data & Pipeline Analytics

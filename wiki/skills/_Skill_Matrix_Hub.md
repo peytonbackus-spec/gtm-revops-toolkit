@@ -3,7 +3,6 @@ id: skill-matrix-hub
 type: hub
 tags: [hub, skill-matrix]
 last_modified: 2026-09-25
-confidence_score: 0.45
 ---
 
 # Skill Matrix Hub

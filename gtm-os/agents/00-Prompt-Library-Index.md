@@ -3,7 +3,6 @@ id: prompt-library-index
 type: hub
 tags: [hub, prompt-library]
 last_modified: 2026-09-25
-confidence_score: 0.5
 ---
 
 # Prompt Library Index (gtm-os/agents/)
@@ -70,4 +69,4 @@ See the organized breakdown in [Full-Org Taxonomy](../../wiki/concepts/full-org-
 See also the [Sub-Agent Layer](sub-agents/00-Sub-Agent-Layer-Index.md) -- 11 shared primitives these agents call instead of duplicating logic.
 
 ## See Also
-[_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](../../wiki/concepts/gtm-stack-integration-architecture.md) . index
+[_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](../../wiki/concepts/gtm-stack-integration-architecture.md)

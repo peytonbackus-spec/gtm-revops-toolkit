@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: Cross-Functional / Engineering & Utility
 purpose: Meta-Tooling
 priority: P2
-confidence_score: 0.35
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Transforming quick, conversational queries into high-yield, structured system pr
 [ai-agentic-workflows](../../wiki/skills/ai-agentic-workflows.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

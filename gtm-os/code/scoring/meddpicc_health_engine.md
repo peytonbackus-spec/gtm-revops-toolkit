@@ -3,7 +3,6 @@ id: code-meddpicc-health-engine
 type: code-index
 tags: [code, revops-engineering, meddpicc]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # MEDDPICC Health & Risk Calculation Engine

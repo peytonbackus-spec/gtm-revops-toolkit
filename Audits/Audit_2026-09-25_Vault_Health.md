@@ -3,7 +3,6 @@ id: vault-audit-2026-09-25
 type: audit
 tags: [hub, meta, audit, vault-health]
 last_modified: 2026-09-25
-confidence_score: 0.9
 ---
 
 > **Context:** this audit was run against the Obsidian "GTM 2nd Brain" vault specifically (a separate, private knowledge base) -- filed here as a dated record of the audit methodology and findings, several of which (the automation-layer gap, the agent library structure) are directly relevant to this repo too.

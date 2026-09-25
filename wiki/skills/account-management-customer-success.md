@@ -3,7 +3,6 @@ id: skill-account-management-customer-success
 type: skill
 tags: [skill, account-management, customer-success, churn, retention]
 last_modified: 2026-09-25
-confidence_score: 0.55
 ---
 
 # Account Management & Customer Success

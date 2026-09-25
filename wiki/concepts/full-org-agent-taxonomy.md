@@ -3,7 +3,6 @@ id: full-org-agent-taxonomy
 type: concept
 tags: [concept, taxonomy, agents, skills]
 last_modified: 2026-09-25
-confidence_score: 0.55
 ---
 
 # Full-Org Skill / Agent / Workflow Taxonomy
@@ -208,4 +207,4 @@ confidence_score: 0.55
 [The Default 9 RevOps Jobs](../../raw-sources/articles/full-org-agent-research/01-default-9-revops-jobs.md) . [Mutual Close Plan Research](../../raw-sources/articles/full-org-agent-research/02-mutual-close-plan.md) . [CS Playbook Framework](../../raw-sources/articles/full-org-agent-research/03-cs-playbook-framework.md)
 
 ## See Also
-[00-Prompt-Library-Index](../../gtm-os/agents/00-Prompt-Library-Index.md) . [Sub-Agent Layer](../../gtm-os/agents/sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](gtm-stack-integration-architecture.md) . index
+[00-Prompt-Library-Index](../../gtm-os/agents/00-Prompt-Library-Index.md) . [Sub-Agent Layer](../../gtm-os/agents/sub-agents/00-Sub-Agent-Layer-Index.md) . [_Skill_Matrix_Hub](../skills/_Skill_Matrix_Hub.md) . [gtm-stack-integration-architecture](gtm-stack-integration-architecture.md)

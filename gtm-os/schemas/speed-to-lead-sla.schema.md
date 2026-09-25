@@ -3,7 +3,6 @@ id: schema-speed-to-lead-sla
 type: schema-index
 tags: [schema, mcp]
 last_modified: 2026-09-25
-confidence_score: 0.7
 ---
 
 # Speed-to-Lead SLA -- Tool I/O Schema

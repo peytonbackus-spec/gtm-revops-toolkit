@@ -3,7 +3,6 @@ id: code-revops-tech-debt-tracker
 type: code-index
 tags: [code, revops-engineering, schema-governance]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # RevOps Schema Tech Debt & Metadata Governance Auditor

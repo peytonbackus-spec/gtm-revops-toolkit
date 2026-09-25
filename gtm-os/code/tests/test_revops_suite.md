@@ -3,7 +3,6 @@ id: code-test-revops-suite
 type: code-index
 tags: [code, revops-engineering, testing]
 last_modified: 2026-09-25
-confidence_score: 1.0
 ---
 
 # RevOps Automation Test Suite

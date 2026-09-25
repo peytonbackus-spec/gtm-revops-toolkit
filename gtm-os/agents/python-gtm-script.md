@@ -6,7 +6,6 @@ last_modified: 2026-09-25
 function: Cross-Functional / Engineering & Utility
 purpose: Automation Build
 priority: P1
-confidence_score: 0.6
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -28,4 +27,4 @@ Building custom API integrations, webhook listeners, or data pipelines.
 [revops-engineering](../../wiki/skills/revops-engineering.md) . [l2a_matching_engine](../../core/engine/l2a_matcher.py) . [meddpicc_health_engine](../code/scoring/meddpicc_health_engine.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [_Skill_Matrix_Hub](../../wiki/skills/_Skill_Matrix_Hub.md)

@@ -3,7 +3,6 @@ id: router-corrections-log
 type: log
 tags: [hub, router, learning-log]
 last_modified: 2026-09-25
-confidence_score: 0.5
 ---
 
 # Router Corrections Log

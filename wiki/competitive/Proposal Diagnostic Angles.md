@@ -3,7 +3,6 @@ tags: [type/gtm]
 id: proposal-diagnostic-angles
 type: positioning-playbook
 last_modified: 2026-09-25
-confidence_score: 0.5
 migrated_from: obsidian-orphaned-vault
 ---
 

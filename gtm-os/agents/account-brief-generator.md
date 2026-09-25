@@ -6,7 +6,6 @@ function: Account Executive
 purpose: Pre-Call Preparation
 priority: P0
 last_modified: 2026-09-25
-confidence_score: 0.45
 bounded_autonomy_note: human-invoked utility prompt, not an autonomous background agent -- does not require a gtm-os/contracts/ Workflow Contract per CLAUDE.md's bounded-autonomy rule
 ---
 
@@ -30,4 +29,4 @@ The highest-frequency AE prep task -- directly grounded in real-world RevOps aut
 [account-executive](../../wiki/skills/account-executive.md) . [GTM Intelligence Overview](../../wiki/competitive/GTM Intelligence Overview.md)
 
 ## See Also
-[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . index
+[00-Prompt-Library-Index](00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md)
