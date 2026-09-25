@@ -81,10 +81,7 @@ gtm-revops-toolkit/
 ├── gtm-os/                  # Prompt/agent library, Workflow Contracts, MCP automation (see below)
 ├── wiki/                    # Role-competency skills, tool intelligence, synthesized research
 ├── raw-sources/             # Immutable research citations backing wiki/ notes
-├── tests/                   # pytest suite for core/
-└── Templates/
-    └── architecture_diagrams/
-        └── gtm_revops_architecture.png
+└── tests/                   # pytest suite for core/
 ```
 
 ---
