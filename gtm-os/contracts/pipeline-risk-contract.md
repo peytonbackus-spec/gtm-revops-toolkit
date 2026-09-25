@@ -1,0 +1,18 @@
+---
+id: contract-pipeline-risk
+type: contract-index
+tags: [contract, workflow-contract, revops]
+last_modified: 2026-09-25
+confidence_score: 1.0
+---
+
+# Pipeline Risk Agent -- Workflow Contract
+
+Companion note for `pipeline-risk-contract.yaml` -- exists so `[pipeline-risk-contract](pipeline-risk-contract.md)` wikilinks resolve (bare wikilinks only match `.md` notes, so the real YAML was previously unreachable from Obsidian's graph/search).
+
+**Real file:** `gtm-os/contracts/pipeline-risk-contract.yaml`
+
+**Objective:** Identify stalled enterprise deals in SFDC with zero Gong call activity for 14+ days. **Role map:** `data_audit_agent` (SFDC field history + stage velocity) -> `synthesis_agent`. **Reads:** `wiki/accounts/`, `raw-sources/transcripts/`. **Writes:** `intelligence/daily/`. **MCP tools:** `sfdc_read`, `gong_search`, `slack_notify`. This is the precedent contract every other role_map in this vault is modeled on.
+
+## See Also
+[00-Prompt-Library-Index](../agents/00-Prompt-Library-Index.md) . [full-org-agent-taxonomy](../../wiki/concepts/full-org-agent-taxonomy.md) . [00-Agent-Router](../agents/00-Agent-Router.md)

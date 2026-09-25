@@ -83,6 +83,18 @@ gtm-revops-toolkit/
 
 ---
 
+## 🧠 Prompt & Agent Library
+
+A 53-agent + 11-sub-agent prompt library organized by Function -> Purpose -> Priority, with 4 bounded-autonomy Workflow Contracts and a proof-of-concept MCP automation server -- built and governed per `CLAUDE.md`.
+
+- **Start here:** [`gtm-os/agents/00-Agent-Router.md`](gtm-os/agents/00-Agent-Router.md) -- routing table from plain-language request to agent/sub-agent
+- **Full taxonomy:** [`wiki/concepts/full-org-agent-taxonomy.md`](wiki/concepts/full-org-agent-taxonomy.md)
+- **Skills:** [`wiki/skills/`](wiki/skills/) -- role-competency notes (SDR, AE, CS, RevOps, GTM leadership)
+- **Tool intelligence:** [`wiki/competitive/`](wiki/competitive/) -- 27 tool profiles + friction/objection heatmaps
+- **Workflow Contracts:** [`gtm-os/contracts/`](gtm-os/contracts/) -- `pipeline-risk`, `inbound-lead-qualifier`, `speed-to-lead-sla`, `casl-compliance-gate`
+- **Automation:** [`gtm-os/mcp/00-Automation-Layer-Index.md`](gtm-os/mcp/00-Automation-Layer-Index.md) -- 1 contract has a working MCP proof-of-concept, 3 pending
+- **Latest audit:** [`Audits/Audit_2026-09-25_Vault_Health.md`](Audits/Audit_2026-09-25_Vault_Health.md)
+
 ## 🚀 Getting Started
 
 ```bash
