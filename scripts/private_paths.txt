@@ -1,0 +1,15 @@
+# Private paths to purge from history (review before running)
+.obsidian
+00_GTM_Dashboard.md
+00_Meta
+00_System
+10_Projects
+20_Areas
+30_Resources
+50_Business
+Audits
+Inbound
+Signals
+Templates
+public
+30_Resources/Research

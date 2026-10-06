@@ -1,0 +1,16 @@
+[project]
+name = "gtm-revops-toolkit"
+version = "0.4.0"
+description = "GTM Engineer + GTM Strategy & Ops toolkit template: config-driven, with a shared core and two role tracks"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+live = ["anthropic>=0.40"]   # only for GTM_LLM_MODE=anthropic
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+asyncio_mode = "auto"

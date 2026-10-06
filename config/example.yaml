@@ -1,0 +1,180 @@
+# =============================================================================
+# GTM & RevOps Toolkit: company config (EXAMPLE values)
+# -----------------------------------------------------------------------------
+# Every script reads this file; nothing company-specific is hardcoded in code.
+# `make new COMPANY="Acme Corp"` copies this to config/company.yaml in a new repo
+# and fills `variables:` so the [BRACKET] tokens in docs resolve.
+#
+# Value provenance tags, so a reader can tell fact from guess:
+#   [PUBLIC]   from the company's public site, press releases or earnings coverage
+#   [POSTING]  from a job posting or brief
+#   [ASSUME]   a reasoned working assumption, to validate in discovery
+# Everything below is [ASSUME] example data until you replace it.
+# =============================================================================
+
+company:
+  name: Example Co
+  tagline: "Replace with the company tagline"
+  segment_note: "Mid-market B2B SaaS, direct + partner motion"
+
+# Fiscal calendar. year_start_month = the month the fiscal year BEGINS (1 = calendar year).
+# Example uses Oct 1, so FY ends Sep 30 and Oct-Dec 2026 = FY27-Q1.
+fiscal:
+  year_start_month: 10
+  as_of_date: 2026-10-01          # fixed so reports reproduce against the synthetic data
+current_fiscal_quarter: FY27-Q1
+
+# Two product lines. Rename to match the company's reporting segments.
+product_lines:
+  core:
+    label: Core Platform
+    products: [Core Platform, Core Analytics, Core Automation, Core Connectors]
+    primary_buyers: [exec_buyer_digital, exec_buyer_primary]
+  addon:
+    label: Add-on Suite
+    products: [Add-on Insights, Add-on Security, Add-on Compliance]
+    primary_buyers: [exec_buyer_primary, exec_buyer_security, influencer_risk, exec_buyer_ops, champion_product]
+  cross_sell: {core: addon, addon: core}      # used by renewal expansion signals
+
+# Market segments. icp_points feed fit scoring; motion drives routing/plays.
+# use_case is the default pain hypothesis used in AI account briefs.
+segments:
+  enterprise:       {label: "Enterprise (5,000+ employees)",     icp_points: 30, motion: enterprise_abm, core_segment: true,  use_case: "Platform consolidation and executive-level reporting across business units"}
+  upper_mid_market: {label: "Upper Mid-Market (1,500-5,000)",    icp_points: 28, motion: enterprise_abm, core_segment: true,  use_case: "Replace point tools and reduce manual operations cost"}
+  mid_market:       {label: "Mid-Market (50-1,500)",             icp_points: 18, motion: partner_led,    core_segment: true,  use_case: "Fast time-to-value via a partner-delivered implementation"}
+  small_business:   {label: "Small Business (<50)",              icp_points: 18, motion: partner_led,    core_segment: true,  use_case: "Self-serve onboarding with light partner support"}
+  vertical_a:       {label: "Vertical A (high-velocity)",        icp_points: 26, motion: velocity,       core_segment: false, use_case: "Onboarding workflow speed and conversion"}
+  vertical_b:       {label: "Vertical B (high-velocity)",        icp_points: 20, motion: velocity,       core_segment: false, use_case: "Quality and abuse controls at signup"}
+  vertical_c:       {label: "Vertical C (high-velocity)",        icp_points: 22, motion: velocity,       core_segment: false, use_case: "Compliance checks at onboarding"}
+  adjacent:         {label: "Adjacent regulated industries",     icp_points: 12, motion: partner_led,    core_segment: false, use_case: "Compliance-driven workflow modernization"}
+  other:            {label: "Non-ICP",                           icp_points: 0,  motion: nurture,        core_segment: false, use_case: ""}
+
+# Buyer personas: who signs, who influences, who blocks. angle = default messaging hook.
+personas:
+  exec_buyer_primary:    {label: "VP / Head of primary function",    role: economic_buyer, points: 25, angle: "Cost and performance trade-off; where the current process breaks at scale"}
+  exec_buyer_security:   {label: "CISO / Head of IT Security",       role: economic_buyer, points: 22, angle: "Risk reduction and a clean security review"}
+  exec_buyer_digital:    {label: "Head of Digital / Channels",       role: economic_buyer, points: 22, angle: "Customer experience gains without added risk"}
+  influencer_risk:       {label: "Chief Risk / Compliance Officer",  role: influencer,     points: 18, angle: "Defensible audit trail"}
+  exec_buyer_ops:        {label: "Head of Operations",               role: economic_buyer, points: 20, angle: "Operational efficiency without adding friction for customers"}
+  champion_product:      {label: "VP Product / Platform",            role: champion,       points: 18, angle: "Time-to-value and integration effort"}
+  champion_practitioner: {label: "Practitioner / Manager",           role: champion,       points: 10, angle: "Day-to-day workload and explainable results"}
+  blocker_procurement:   {label: "Procurement / Vendor Risk / IT",   role: blocker,        points: 5,  angle: "Clean paperwork and a fast, predictable review"}
+  unknown:               {label: "Unknown / Non-buyer",              role: none,           points: 0,  angle: "Confirm role and whether they own the outcome"}
+
+regions: [NA, EMEA, APAC, LATAM]
+
+# GTM stack. Defaults are common tools; replace with the company's actual stack.
+stack:
+  crm: Salesforce
+  forecasting: Clari
+  conversation_intelligence: Gong
+  sales_engagement: Outreach
+  dialer: Orum
+  data_provider: Apollo
+  enrichment_orchestration: Clay
+  conversational_marketing: Drift
+  social_selling: LinkedIn Sales Navigator
+
+partners:
+  - {name: Partner A, type: reseller}
+  - {name: Partner B, type: technology_partner}
+  - {name: Partner C, type: technology_partner}
+  - {name: Partner D, type: marketplace}
+
+# Variables that resolve the [BRACKET] tokens in docs/specs (see VARIABLES.md).
+variables:
+  COMPANY_NAME: Example Co
+  CRM: Salesforce
+  FORECAST_TOOL: Clari
+  CONVERSATION_INTELLIGENCE: Gong
+  SEQUENCER: Outreach
+  DIALER: Orum
+  DATA_PROVIDER: Apollo
+  ENRICHMENT_ORCHESTRATION: Clay
+  WEBSITE_CHAT: Drift
+  SOCIAL_SELLING: LinkedIn Sales Navigator
+
+# ---------------------------------------------------------------------------
+# GTM ENGINEER track: lead lifecycle, scoring and routing
+# ---------------------------------------------------------------------------
+lead_lifecycle:
+  statuses: [New, Enriching, MQL, SAL, Working, SQL, Converted, Recycled, Disqualified]
+  sla_hours:                                           # [ASSUME] targets to agree with Marketing + SDR leadership
+    mql_to_sal: 4          # SDR accepts or rejects within 4 business hours
+    sal_to_first_touch: 1  # high-intent leads get a 1-hour touch
+    sal_to_sql_days: 14    # work it or recycle it
+  disqualify_reasons: [Not ICP, Competitor, Student/Job Seeker, Existing Open Opp, No Use Case, Bad Data, Duplicate]
+  recycle_after_days: 90
+
+lead_scoring:
+  # Two independent axes, combined into a grade like "A1". [ASSUME] starting weights; calibrate_scoring.py tunes them
+  fit_bands:    {A: 85, B: 70, C: 50}    # fit score thresholds (0-100)
+  intent_bands: {1: 60, 2: 35, 3: 15}    # intent score thresholds (0-100)
+  mql_grades: [A1, A2, B1, A3, B2]       # grades that become MQL automatically
+  region_points: {NA: 15, EMEA: 12, APAC: 8, LATAM: 6}
+  size_bands:                            # employees -> points; first match wins, else `size_default_points`
+    - {min_employees: 10000, points: 20}
+    - {min_employees: 1500,  points: 14}
+    - {min_employees: 200,   points: 8}
+  size_default_points: 2
+  alignment:                             # reward product/segment combos the company actually wins
+    - {product_interest: core,  segments: core_segments, points: 10}   # core_segments = segments with core_segment: true
+    - {product_interest: addon, segments: all_icp,       points: 10}   # all_icp = every segment except `other`
+  intent_signals:                        # points + half-life (days) for decay; hand_raiser = explicit buying action
+    demo_request:         {points: 40, half_life_days: 14, hand_raiser: true}
+    chat_engaged:         {points: 30, half_life_days: 7,  hand_raiser: true}
+    pricing_page_visit:   {points: 20, half_life_days: 10}
+    webinar_attended:     {points: 15, half_life_days: 21}
+    content_download:     {points: 12, half_life_days: 21}
+    champion_job_change:  {points: 18, half_life_days: 60}    # social-selling alert
+    team_hiring:          {points: 10, half_life_days: 45}    # job-post signal from enrichment tool
+    competitor_renewal_window: {points: 20, half_life_days: 90}  # contract-end signal
+    email_reply_positive: {points: 25, half_life_days: 14}
+
+lead_routing:
+  # Ordered pods; first match wins. [ASSUME] pod structure and roster
+  pods:
+    enterprise_na: {segments: [enterprise, upper_mid_market], regions: [NA]}
+    velocity_na:   {segments: [vertical_a, vertical_b, vertical_c], regions: [NA]}
+    partner_led_na: {segments: [mid_market, small_business, adjacent], regions: [NA]}
+    emea_all:      {segments: ["*"], regions: [EMEA]}
+    intl_other:    {segments: ["*"], regions: [APAC, LATAM]}
+  pod_sdrs:
+    enterprise_na: ["SDR - Alex Rivera", "SDR - Bri Okafor"]
+    velocity_na: ["SDR - Chen Wu", "SDR - Dana Lopes"]
+    partner_led_na: ["SDR - Eli Novak"]
+    emea_all: ["SDR - Fran Moretti"]
+    intl_other: ["SDR - Fran Moretti"]
+  partner_manager: "Partner Mgr - Olu Adeyemi"
+  max_open_leads_per_sdr: 60
+
+# ---------------------------------------------------------------------------
+# GTM STRATEGY & OPS track: opportunity, forecast and renewal settings
+# ---------------------------------------------------------------------------
+opportunity:
+  types: [New Logo, Expansion, Renewal]
+  stages:                                              # [ASSUME] stage design; see stage-definitions.md
+    - {name: "1 - Qualify",              probability: 0.10, max_days: 21}
+    - {name: "2 - Discovery",            probability: 0.20, max_days: 30}
+    - {name: "3 - Technical Validation", probability: 0.40, max_days: 45}   # POC / sandbox / data test
+    - {name: "4 - Business Case & Security Review", probability: 0.60, max_days: 45}
+    - {name: "5 - Negotiate & Contract", probability: 0.80, max_days: 30}
+    - {name: "Closed Won",               probability: 1.00, max_days: null}
+    - {name: "Closed Lost",              probability: 0.00, max_days: null}
+  forecast_categories: [Pipeline, Best Case, Commit, Closed, Omitted]
+  closed_lost_reasons: [Price, Lost to Competitor, No Decision / Status Quo, Build In-House, Security / Compliance Blocker, Integration Effort, Timing / Budget, Champion Left]
+  coverage_target: 3.0                                 # [ASSUME] pipeline / remaining quota
+
+renewals:
+  lookahead_days: 180
+  health_weights:                                      # [ASSUME]; must sum to 1.0
+    volume_trend: 0.30        # usage trend (telemetry)
+    utilization: 0.20         # % of committed volume consumed
+    support: 0.15
+    sponsor: 0.20
+    competitive: 0.15
+
+# New-business + expansion quota by fiscal quarter and region. [ASSUME] illustrative only,
+# sized to the synthetic data so coverage math has something to show. Replace with the real plan.
+quota:
+  FY27-Q1: {NA: 1600000, EMEA: 450000, APAC: 180000, LATAM: 120000}
