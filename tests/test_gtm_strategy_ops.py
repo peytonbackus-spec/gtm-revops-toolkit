@@ -46,7 +46,6 @@ def test_forecast_bias_pattern_detected_by_region():
 
 
 def test_coverage_python_matches_sql():
-    q = CFG["current_fiscal_quarter"]
     py = {r["region"]: r["open_pipeline"] for r in coverage(read_csv("opportunities.csv"), CFG)}
     sql_rows = run_file("gtm_strategy_ops/pipeline_analytics/sql/pipeline_coverage.sql")[0]
     sql = {}
@@ -54,7 +53,7 @@ def test_coverage_python_matches_sql():
         sql[r["region"]] = sql.get(r["region"], 0) + r["pipeline_usd"]
     for region, amount in sql.items():
         assert py[region] == amount, region
-    assert q == "FY27-Q1"
+    assert py and sql  # both sides found pipeline in the current quarter
 
 
 def test_open_in_quarter_excludes_omitted_and_closed():

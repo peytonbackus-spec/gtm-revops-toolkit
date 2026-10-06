@@ -15,7 +15,7 @@ SELECT
 FROM v_opportunities
 WHERE is_closed = 0
   AND forecast_category <> 'Omitted'
-  AND close_fiscal_quarter = 'FY27-Q1'
+  AND close_fiscal_quarter = '{{CURRENT_FISCAL_QUARTER}}'
 GROUP BY region, product_line
 ORDER BY pipeline_usd DESC;
 
@@ -38,7 +38,7 @@ SELECT
     owner,
     COUNT(*)                                                         AS open_opps,
     CAST(SUM(amount) AS INT)                                         AS pipeline_usd,
-    SUM(CASE WHEN close_date < '2026-10-01' THEN 1 ELSE 0 END)       AS past_close_date,
+    SUM(CASE WHEN close_date < '{{AS_OF}}' THEN 1 ELSE 0 END)       AS past_close_date,
     SUM(CASE WHEN stage IN ('3 - Technical Validation', '4 - Business Case & Security Review',
                             '5 - Negotiate & Contract') AND eb_engaged = 0 THEN 1 ELSE 0 END) AS late_stage_no_eb,
     SUM(CASE WHEN contacts_engaged < 3 THEN 1 ELSE 0 END)            AS single_threaded

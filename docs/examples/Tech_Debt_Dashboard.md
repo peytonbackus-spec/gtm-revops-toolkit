@@ -19,8 +19,8 @@ status: active
 
 | Source Note | Location | Description / Remedy | Status |
 | :--- | :--- | :--- | :--- |
-| [Sync_Inclusion_Rules.md](20_Areas/RevOps/Sync_Inclusion_Rules.md) | Line 14 | Disqualification workflow currently lacks field validation for missing reasons. | Open |
-| [Lead_Scoring_PQL_Spec.md](20_Areas/RevOps/Lead_Scoring_PQL_Spec.md) | Line 25 | Review scoring decay rules quarterly to prevent stale MQL volume. | Open |
+| [Sync_Inclusion_Rules.md](../specs/architecture/Sync_Inclusion_Rules.md) | Line 14 | Disqualification workflow currently lacks field validation for missing reasons. | Open |
+| [Lead_Scoring_PQL_Spec.md](../specs/lead-management/Lead_Scoring_PQL_Spec.md) | Line 25 | Review scoring decay rules quarterly to prevent stale MQL volume. | Open |
 
 ---
 

@@ -1,6 +1,8 @@
 # Changelog
 
 ## 0.4.2
+- SQL: current fiscal quarter and as-of date now come from config ({{CURRENT_FISCAL_QUARTER}}, {{AS_OF}}) instead of being hardcoded.
+- Scaffold: generated repos no longer carry the scaffold test (it failed once the scaffolder removed itself) or the template-only how-to page.
 - CI: pinned ruff to an explicit rule set (newer ruff defaults had turned on 100+ style rules); fixed the real findings, including an undefined-name bug in a prototype prompt.
 - Sample data: forecast quarters are now labelled from the configured fiscal calendar, so calendar-year companies get correct labels.
 

@@ -19,3 +19,12 @@ def test_scaffold_generates_runnable_repo():
         r = subprocess.run([sys.executable, "-m", "gtm_engineer.lead_scoring.score_leads"],
                            cwd=dest, capture_output=True, text=True)
         assert r.returncode == 0 and "Acme Corp" in r.stdout
+
+
+def test_scaffolded_repo_does_not_carry_template_only_files():
+    with tempfile.TemporaryDirectory() as tmp:
+        dest = Path(tmp) / "acme"
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "new_company.py"), "Acme Corp", "--dest", str(dest)],
+                       check=True, capture_output=True)
+        for rel in ("scripts/new_company.py", "tests/test_scaffold.py", "docs/overview/new-company-repo.md"):
+            assert not (dest / rel).exists(), rel

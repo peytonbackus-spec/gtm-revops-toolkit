@@ -13,14 +13,17 @@ import sqlite3
 import sys
 from pathlib import Path
 
-from shared_core.config import DATA_DIR, FY_START_MONTH, ROOT, table
+from shared_core.config import AS_OF, DATA_DIR, FY_START_MONTH, ROOT, load_config, table
 
 SEMANTIC = ROOT / "shared_core" / "metrics" / "sql" / "semantic_layer.sql"
 
 
 def render(sql: str) -> str:
-    """Fill config placeholders (currently {{FY_START_MONTH}}) so SQL and Python share one definition."""
-    return sql.replace("{{FY_START_MONTH}}", str(FY_START_MONTH))
+    """Fill config placeholders so SQL and Python share one definition:
+    {{FY_START_MONTH}}, {{CURRENT_FISCAL_QUARTER}}, {{AS_OF}}."""
+    return (sql.replace("{{FY_START_MONTH}}", str(FY_START_MONTH))
+               .replace("{{CURRENT_FISCAL_QUARTER}}", str(load_config()["current_fiscal_quarter"]))
+               .replace("{{AS_OF}}", AS_OF.isoformat()))
 
 
 def load_warehouse() -> sqlite3.Connection:
