@@ -1,12 +1,14 @@
 import pytest
+
 from gtm_engineer.enrichment.l2a_matcher import (
-    normalize_domain,
-    normalize_company_name,
-    jaro_winkler_similarity,
-    LeadRecord,
     AccountRecord,
+    LeadRecord,
     LeadToAccountMatcher,
+    jaro_winkler_similarity,
+    normalize_company_name,
+    normalize_domain,
 )
+
 
 class TestNormalizations:
     def test_normalize_domain_subdomains_and_protocols(self):

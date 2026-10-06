@@ -1,4 +1,6 @@
-import os, urllib.request, xml.etree.ElementTree as ET
+import os
+import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime
 
 vault = os.path.expanduser("~/GTM 2nd Brain")

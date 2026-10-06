@@ -1,4 +1,5 @@
 import os
+
 import requests
 
 HUBSPOT_API_KEY = os.getenv("HUBSPOT_API_KEY")

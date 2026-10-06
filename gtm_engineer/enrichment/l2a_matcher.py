@@ -1,5 +1,6 @@
 import re
-from typing import List, Optional, Tuple, Set
+from typing import List, Optional, Set, Tuple
+
 from pydantic import BaseModel, Field
 
 FREE_EMAIL_PROVIDERS: Set[str] = {

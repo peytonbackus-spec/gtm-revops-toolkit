@@ -1,6 +1,8 @@
-from typing import Dict, Any, Optional
+from typing import Any, Dict, Optional
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, EmailStr
+
 from gtm_engineer.enrichment.rules_engine import WaterfallEnrichmentEngine
 
 app = FastAPI(
@@ -40,4 +42,4 @@ async def enrich_lead(payload: EnrichmentRequest):
             enriched_data=enriched_result,
         )
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Waterfall enrichment failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Waterfall enrichment failed: {e!s}") from e

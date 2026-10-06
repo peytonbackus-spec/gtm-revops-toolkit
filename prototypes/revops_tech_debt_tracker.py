@@ -4,7 +4,7 @@ Analyzes Salesforce field utilization and identifies fields slated for deprecati
 """
 
 from datetime import datetime
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
 class RevOpsTechDebtAuditor:

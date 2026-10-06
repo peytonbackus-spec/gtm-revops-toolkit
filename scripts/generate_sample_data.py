@@ -21,7 +21,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from shared_core.config import AS_OF, DATA_DIR, load_config  # noqa: E402
+from shared_core.config import AS_OF, DATA_DIR, fiscal_quarter, load_config  # noqa: E402
 
 rng = random.Random(42)
 cfg = load_config()
@@ -330,13 +330,22 @@ for acct in [a for a in accounts if a["is_customer"]]:
         renewals.append(r)
 
 # ----------------------------------------------------------------------------- forecast snapshots
-# Example fiscal year starts Oct 1 (config fiscal.year_start_month = 10): FY26 Q2 = Jan-Mar, Q3 = Apr-Jun, Q4 = Jul-Sep 2026.
-QUARTERS = {"FY26-Q2": (date(2026, 1, 1), date(2026, 3, 31)), "FY26-Q3": (date(2026, 4, 1), date(2026, 6, 30)),
-            "FY26-Q4": (date(2026, 7, 1), date(2026, 9, 30))}
+# The three completed fiscal quarters before AS_OF, labelled with the configured fiscal calendar.
+def _add_months(d0: date, n: int) -> date:
+    m = d0.month - 1 + n
+    return date(d0.year + m // 12, m % 12 + 1, 1)
+
+
+_sm = int(cfg.get("fiscal", {}).get("year_start_month", 1))
+_cur = _add_months(date(AS_OF.year, AS_OF.month, 1), -((AS_OF.month - _sm) % 3))   # start of the current quarter
+QUARTERS = {}
+for _k in (3, 2, 1):
+    _qs = _add_months(_cur, -3 * _k)
+    QUARTERS[fiscal_quarter(_qs, _sm)] = (_qs, _add_months(_qs, 3) - timedelta(days=1))
 BIAS = {"NA": 0.92, "EMEA": 1.12, "APAC": 1.05, "LATAM": 1.0}  # NA sandbags commit, EMEA over-calls
 snapshots = []
 for q, (qs, qe) in QUARTERS.items():
-    for region in ["NA", "EMEA", "APAC", "LATAM"]:
+    for region in cfg["regions"]:
         actual = sum(o["amount"] for o in opps if o["is_won"] and o["region"] == region
                      and qs <= date.fromisoformat(o["close_date"]) <= qe and o["type"] != "Renewal")
         if actual == 0:
@@ -344,7 +353,7 @@ for q, (qs, qe) in QUARTERS.items():
         for wk in range(13):
             progress = wk / 12
             noise = rng.gauss(0, 0.12 * (1 - progress))
-            commit = actual * (BIAS[region] + noise) * (0.88 + 0.12 * progress)
+            commit = actual * (BIAS.get(region, 1.0) + noise) * (0.88 + 0.12 * progress)
             snapshots.append({
                 "quarter": q, "week": wk + 1, "snapshot_date": d(qs + timedelta(weeks=wk)), "region": region,
                 "commit": int(commit), "best_case": int(commit * rng.uniform(1.2, 1.45)),

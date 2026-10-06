@@ -1,14 +1,14 @@
 """🟪 Shared core: config, data quality, PII guard, HITL, SQL/Python parity."""
 from datetime import date
 
+import pytest
+
 from shared_core.ai_governance.hitl import HITLPolicy
 from shared_core.ai_governance.llm_client import LLMClient, OutputContractError
 from shared_core.ai_governance.pii_guard import contains_pii, sanitize_record
 from shared_core.config import dedupe_leads, fiscal_quarter, load_config, read_csv
 from shared_core.data_quality.dq_monitor import run as run_dq
 from shared_core.metrics.run_sql import load_warehouse
-
-import pytest
 
 
 def test_config_is_complete_and_internally_consistent():

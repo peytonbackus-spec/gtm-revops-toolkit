@@ -1,6 +1,8 @@
 from enum import Enum
-from typing import Optional, List, Dict, Any
-from pydantic import BaseModel, Field, EmailStr, HttpUrl, model_validator
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel, EmailStr, Field, model_validator
+
 
 class MatchConfidence(str, Enum):
     EXACT = "exact"

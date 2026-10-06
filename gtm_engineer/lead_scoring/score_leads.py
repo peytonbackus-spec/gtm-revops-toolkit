@@ -23,6 +23,7 @@ from datetime import date, timedelta
 
 from shared_core.config import AS_OF, load_config, parse_date, read_csv, table, to_bool, to_float, write_csv
 
+
 def hand_raiser_signals(cfg: dict) -> set[str]:
     """Signals flagged hand_raiser: true in config (explicit buying actions)."""
     return {k for k, v in cfg["lead_scoring"]["intent_signals"].items() if v.get("hand_raiser")}

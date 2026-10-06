@@ -12,8 +12,7 @@ from __future__ import annotations
 from collections import defaultdict
 from statistics import median
 
-from shared_core.config import (AS_OF, fiscal_quarter, load_config, parse_date, pct, read_csv, table, to_float,
-                                write_csv)
+from shared_core.config import AS_OF, fiscal_quarter, load_config, parse_date, pct, read_csv, table, to_float, write_csv
 
 
 def stage_probability(cfg: dict) -> dict:

@@ -1,5 +1,6 @@
 import json
 
+
 class GTMAgent:
     def __init__(self, crm_api_key: str, llm_api_key: str):
         self.crm_api_key = crm_api_key

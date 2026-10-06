@@ -12,8 +12,8 @@ last_updated: 2026-08-21
 ---
 """
 
-import os
-from typing import Dict, Any
+from typing import Any, Dict
+
 
 class OutboundResearchAgent:
     """AI Agent framework to generate personalized outbound messaging based on firmographic signals."""
@@ -38,6 +38,6 @@ class OutboundResearchAgent:
         return f"""
 System: You are an expert RevOps and GTM Engineer.
 Context: {signal_summary}
-Target Prospect: {prospect.get(name)}, {prospect.get(title)} at {prospect.get(company)}.
+Target Prospect: {prospect.get("name")}, {prospect.get("title")} at {prospect.get("company")}.
 Task: Draft a concise 3-sentence outreach email referencing their current stack and operational scaling bottlenecks.
 """.strip()

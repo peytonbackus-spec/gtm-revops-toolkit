@@ -1,6 +1,7 @@
 import pytest
-import pytest_asyncio
+
 from gtm_engineer.enrichment.rules_engine import AttributeDict, WaterfallEnrichmentEngine
+
 
 class TestAttributeDict:
     def test_dot_notation_access(self):

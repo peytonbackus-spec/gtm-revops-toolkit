@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+- CI: pinned ruff to an explicit rule set (newer ruff defaults had turned on 100+ style rules); fixed the real findings, including an undefined-name bug in a prototype prompt.
+- Sample data: forecast quarters are now labelled from the configured fiscal calendar, so calendar-year companies get correct labels.
+
 ## 0.4.1
 - README rewritten: role colour system, lifecycle and template diagrams, config map, AI governance summary.
 

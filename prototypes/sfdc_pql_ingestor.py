@@ -1,5 +1,3 @@
-import sys
-import json
 
 def process_pql_payload(payload, dry_run=True):
     account_domain = payload.get("domain")
@@ -19,7 +17,7 @@ def process_pql_payload(payload, dry_run=True):
         return True
 
     try:
-        from simple_salesforce import Salesforce
+        import simple_salesforce  # noqa: F401  (presence check only)
         print("[*] Pushed to Salesforce REST API successfully.")
     except ImportError:
         print("Note: simple_salesforce library not installed. Running in dry-run mode.")

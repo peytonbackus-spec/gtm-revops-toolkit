@@ -13,8 +13,9 @@ last_updated: 2026-08-21
 """
 
 import os
+
 import requests
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 

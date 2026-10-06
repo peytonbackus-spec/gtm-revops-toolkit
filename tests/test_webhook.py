@@ -1,5 +1,5 @@
-import pytest
 from fastapi.testclient import TestClient
+
 from gtm_engineer.integrations.webhook import app
 
 client = TestClient(app)
