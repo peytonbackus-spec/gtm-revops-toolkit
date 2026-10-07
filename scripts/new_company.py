@@ -64,10 +64,10 @@ def write_config(dest: Path, company: str, fy_start_month: int, variables: dict[
     text = text.replace("name: Example Co", f"name: {company}", 1)
     text = text.replace("  COMPANY_NAME: Example Co", f"  COMPANY_NAME: {company}", 1)
     text = text.replace("year_start_month: 10", f"year_start_month: {fy_start_month}", 1)
-    # quota/current quarter keys are labelled for an Oct-start fiscal year; relabel for other calendars
+    # quarter labels in the example (quota, bookings plan, current quarter) are for an Oct-start fiscal year;
+    # relabel every one of them for other calendars so the keys still line up with the dates
     if fy_start_month != 10:
-        label = fiscal_label(date(2026, 10, 1), fy_start_month)
-        text = text.replace("FY27-Q1", label)
+        text = FY_LABEL.sub(lambda m: relabel_quarter(m.group(0), fy_start_month), text)
     for key, value in variables.items():
         text = re.sub(rf"^(  {key}: ).*$", rf"\g<1>{value}", text, count=1, flags=re.M)
     header = (f"# Company config for {company}. Generated {date.today().isoformat()} from the template's config/example.yaml.\n"
@@ -76,6 +76,17 @@ def write_config(dest: Path, company: str, fy_start_month: int, variables: dict[
     path.write_text(header + text, encoding="utf-8")
     (dest / "config" / "example.yaml").unlink(missing_ok=True)
     return path
+
+
+FY_LABEL = re.compile(r"FY(\d{2})-Q([1-4])")
+
+
+def relabel_quarter(label: str, start_month: int) -> str:
+    """Map an Oct-start quarter label (FY27-Q1 = Oct-Dec 2026) to the same calendar quarter under another start month."""
+    m = FY_LABEL.fullmatch(label)
+    fy, q = 2000 + int(m.group(1)), int(m.group(2))
+    months = (fy - 1) * 12 + 9 + 3 * (q - 1)           # months since year 0; Oct = index 9
+    return fiscal_label(date(months // 12, months % 12 + 1, 1), start_month)
 
 
 def fiscal_label(d: date, start_month: int) -> str:

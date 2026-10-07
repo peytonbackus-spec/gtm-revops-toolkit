@@ -14,5 +14,6 @@
 | `[ENRICHMENT_ORCHESTRATION]` | Clay | Enrichment workflow tool |
 | `[WEBSITE_CHAT]` | Drift | Conversational marketing |
 | `[SOCIAL_SELLING]` | LinkedIn Sales Navigator | Social selling tool |
+| `[MARKETING_AUTOMATION]` | HubSpot | Marketing automation (forms, email, subscription status) |
 
 Add a variable by putting it under `variables:` in `config/example.yaml`, then use `[NAME]` in any `.md`/`.py` file. Tags `[ASSUME]`, `[PUBLIC]`, `[POSTING]`, `[VERIFY]` are provenance labels, not variables.
