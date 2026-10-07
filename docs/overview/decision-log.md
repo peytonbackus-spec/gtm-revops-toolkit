@@ -20,3 +20,5 @@ Design choices, and the reasoning behind each, so they can be defended or change
 | 14 | **Python + SQL return identical numbers (tested)** | One definition per metric across both roles | Separate reporting stacks |
 | 15 | **All company specifics in one YAML config, resolved by `make new`** | A new company repo is a config change, not a code fork | Per-company code branches |
 | 16 | **Private material split out into a separate private repo** | The template can be public and shared safely | One repo with a gitignore |
+| 17 | **Vendor benchmark claims are re-tested on our own accounts, blind, with an interval** | A vendor's number depends on its ICP, labeling and sample size; a 100-account blind test is cheap and answers the question we actually have | Trusting published benchmarks |
+| 18 | **Plugins, mods and sub-agent effort follow the AI workflow standard** | They change agent behavior or cost; effort never replaces the HITL gate | Case-by-case approval with no written scope or stop rule |

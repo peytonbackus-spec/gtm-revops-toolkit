@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.3 (unreleased)
+- Added `gtm_engineer/enrichment/precision_audit.py` (Wilson intervals, exact paired comparison, blind labeling sheet, `--demo`) with tests, plus the Vendor Benchmark Verification playbook.
+- AI governance standard: added plugin / mod admission questions and a sub-agent effort rule.
+- Decision log: entries 17 and 18.
+
 ## 0.4.2
 - SQL: current fiscal quarter and as-of date now come from config ({{CURRENT_FISCAL_QUARTER}}, {{AS_OF}}) instead of being hardcoded.
 - Scaffold: generated repos no longer carry the scaffold test (it failed once the scaffolder removed itself) or the template-only how-to page.

@@ -43,3 +43,15 @@ Measure realized gains in conversion, speed and team capacity, and workflow impa
 | Renewal signals | Lead time between flag and renewal date | Gross retention on flagged vs unflagged accounts | Prior 4 quarters |
 
 Rollout: shadow mode (generate but don't show) → assisted (shown to the rep, rep decides) → auto-apply for low-impact actions only.
+
+## Extending the standard: plugins, mods and sub-agent effort
+
+Agent tooling now lets third-party plugins change agent behavior, installs them from marketplaces, and lets you set how hard a sub-agent works. Treat each like a workflow that needs the six parts above, with five admission questions answered in writing before it is installed:
+
+1. **Scope:** what can it read and write? Anything that writes to CRM metadata or sends externally needs a HITL gate on every write.
+2. **Kind:** does it add a command, or change behavior (hooks, permissions)? Behavior changes are a policy decision.
+3. **Provenance:** which marketplace and which pinned version?
+4. **Owner:** one named person reviews updates.
+5. **Stop rule:** the condition under which it halts and hands back to a person, written before the first run.
+
+**Sub-agent effort is a risk setting, not a speed setting.** Cheap, easily checked work gets low effort; work whose errors propagate into routing, scoring or forecasts gets high effort and still gets review; anything that writes to the CRM or sends externally needs approval at every effort level. Effort never replaces `hitl.py`.
