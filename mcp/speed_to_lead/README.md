@@ -4,7 +4,7 @@ Five tools: `crm_read_new_leads`, `calendar_read_no_shows`, `evaluate_sla_breach
 
 ## Setup
 1. Needs Python 3.10+ (the `mcp` SDK requires it): `uv venv --python 3.12 .venv` (or `python3.12 -m venv .venv`).
-2. `uv pip install --python .venv/bin/python -r requirements.txt` (pins `mcp<2`; v2 renamed FastMCP).
+2. `uv pip install --python .venv/bin/python -r requirements.txt` (pins `mcp<2`; v2 renamed FastMCP). To reproduce the exact versions this server was last verified against, install with `pip install -r requirements.lock` instead.
 3. `.venv/bin/python server.py --selftest` smoke-tests with mock data, no MCP client.
 4. `.venv/bin/python -m pytest` runs the 27 tests (no network).
 5. Pick backends: `SPEED_TO_LEAD_ADAPTERS="crm=json,calendar=json,notifier=mock,sequencer=mock"` (kinds: crm, calendar, notifier, sequencer; default all `mock`).

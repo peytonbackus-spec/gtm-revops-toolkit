@@ -22,6 +22,8 @@ uv venv --python 3.12 .venv && uv pip install -p .venv/bin/python -r requirement
 .venv/bin/python -m pytest -q
 ```
 
+To reproduce the exact versions this server was last verified against, install with `pip install -r requirements.lock` instead.
+
 ## Register with Claude Code (print only; run it yourself)
 
 ```
