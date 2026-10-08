@@ -8,7 +8,7 @@ make test                           # unit tests, SQL/Python parity, prompt eval
 make demo                           # every report, both tracks
 ```
 
-No API keys needed. The AI workflows use a deterministic mock model by default. To run the same prompts live: `GTM_LLM_MODE=anthropic ANTHROPIC_MODEL=<model> ANTHROPIC_API_KEY=... python -m ...`
+No API keys needed. The AI workflows use a deterministic mock model by default. To run the same prompts live: `GTM_LLM_MODE=anthropic GTM_LLM_MODEL=<model> ANTHROPIC_API_KEY=... python -m ...`
 
 ## Commands
 

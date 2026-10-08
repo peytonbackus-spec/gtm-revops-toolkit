@@ -84,3 +84,30 @@ def test_dedupe_matches_sql_duplicate_flag():
     con = load_warehouse()
     sql_unique = con.execute("SELECT COUNT(*) FROM v_leads WHERE is_duplicate = 0").fetchone()[0]
     assert len(dedupe_leads(leads)) == sql_unique
+
+
+def _live_model(monkeypatch, gtm=None, anthropic=None):
+    import sys
+    import types
+
+    monkeypatch.setitem(sys.modules, "anthropic", types.SimpleNamespace(Anthropic=lambda: object()))
+    for key, val in (("GTM_LLM_MODEL", gtm), ("ANTHROPIC_MODEL", anthropic)):
+        monkeypatch.delenv(key, raising=False)
+        if val:
+            monkeypatch.setenv(key, val)
+    return LLMClient(mode="anthropic").model
+
+
+def test_llm_model_prefers_gtm_llm_model(monkeypatch, caplog):
+    assert _live_model(monkeypatch, gtm="m-gtm", anthropic="m-anth") == "m-gtm"
+    assert "unset" not in caplog.text
+
+
+def test_llm_model_falls_back_to_anthropic_model(monkeypatch, caplog):
+    assert _live_model(monkeypatch, anthropic="m-anth") == "m-anth"
+    assert "unset" not in caplog.text
+
+
+def test_llm_model_default_logs_warning(monkeypatch, caplog):
+    assert _live_model(monkeypatch) == "claude-sonnet-5-5"
+    assert "claude-sonnet-5-5" in caplog.text and "unset" in caplog.text

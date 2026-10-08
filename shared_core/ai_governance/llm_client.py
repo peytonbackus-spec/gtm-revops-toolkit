@@ -3,7 +3,7 @@
 Every AI workflow in the repo calls `complete_json()`. In the default `mock` mode
 the caller supplies a deterministic responder, so the whole repo runs, tests and
 evaluates with no API key and no data leaving the machine. Set
-GTM_LLM_MODE=anthropic (plus ANTHROPIC_API_KEY and ANTHROPIC_MODEL) to run the
+GTM_LLM_MODE=anthropic (plus ANTHROPIC_API_KEY) to run the
 same prompts against a live model. The guardrails are identical in both modes:
 
   * input passes through pii_guard.sanitize_record (allow-list + redaction)
@@ -13,6 +13,7 @@ same prompts against a live model. The guardrails are identical in both modes:
 from __future__ import annotations
 
 import json
+import logging
 import os
 from datetime import datetime, timezone
 from pathlib import Path
@@ -41,6 +42,10 @@ def load_prompt(path: str | Path) -> tuple[str, str]:
     return pid, body.strip()
 
 
+DEFAULT_MODEL = "claude-sonnet-5-5"
+log = logging.getLogger(__name__)
+
+
 class LLMClient:
     def __init__(self, mode: str | None = None):
         self.mode = (mode or os.getenv("GTM_LLM_MODE", "mock")).lower()
@@ -49,7 +54,10 @@ class LLMClient:
             import anthropic  # optional dependency, only needed for live mode
 
             self._client = anthropic.Anthropic()
-            self.model = os.environ["ANTHROPIC_MODEL"]  # set explicitly; no silent default
+            self.model = os.getenv("GTM_LLM_MODEL") or os.getenv("ANTHROPIC_MODEL")
+            if not self.model:
+                self.model = DEFAULT_MODEL
+                log.warning("GTM_LLM_MODEL and ANTHROPIC_MODEL are unset; using default model %s", DEFAULT_MODEL)
 
     def complete_json(self, *, prompt_id: str, system: str, record: dict, required_keys: list[str],
                       mock_responder: Callable[[dict], dict], task: str = "") -> dict:

@@ -28,7 +28,7 @@ Adjust the strictness to the company's data. If its product handles identity doc
 - **Deny by default.** Only fields on the allow-list in `pii_guard.PROMPT_SAFE_FIELDS` reach a prompt. Email addresses, phone numbers, account and routing numbers, card numbers and DOBs are redacted from free text.
 - **No customer production data in prompts.** Renewal health uses aggregated usage trends (volume % change, utilization %), never record-level data.
 - **Audit log.** Every call writes prompt id@version, mode, input field names (not values) and PII actions to `outputs/ai_audit_log.jsonl`.
-- **Vendor posture.** In live mode, use a provider and tier with zero-retention terms approved by the company's security team. The client reads the model from `ANTHROPIC_MODEL` and never uses a silent default.
+- **Vendor posture.** In live mode, use a provider and tier with zero-retention terms approved by the company's security team. The client reads the model from `GTM_LLM_MODEL`, then `ANTHROPIC_MODEL`, then falls back to `claude-sonnet-5-5` with a logged warning; pin it explicitly per environment.
 
 ## Measuring realized gains
 

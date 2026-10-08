@@ -13,7 +13,7 @@ In production the trigger is a CRM flow / enrichment-tool HTTP column calling th
 a small API (or an n8n workflow). The Python is the same either way.
 
     python -m gtm_engineer.ai_research.account_research            # mock mode, no API key
-    GTM_LLM_MODE=anthropic ANTHROPIC_MODEL=<model> python -m ...   # live mode
+    GTM_LLM_MODE=anthropic GTM_LLM_MODEL=<model> python -m ...   # live mode
 """
 from __future__ import annotations
 
