@@ -16,6 +16,8 @@ Audit date: 2026-10-08. `~/gtm-revops-toolkit` is the canonical toolkit.
 
 Code files listed as "worth porting" were not copied: they depend on `core/models` or on dev's layout and need adapting to canonical's modules first.
 
+Third-party skills: 18 skills from swan-gtm/gtm-skills (MIT) were ported on 2026-10-13 as contracts, playbooks and governance notes. See [docs/crosswalks/swan-gtm-skills.md](crosswalks/swan-gtm-skills.md).
+
 ## ~/workflows
 
 | file | purpose |

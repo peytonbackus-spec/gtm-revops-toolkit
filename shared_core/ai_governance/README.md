@@ -55,3 +55,7 @@ Agent tooling now lets third-party plugins change agent behavior, installs them 
 5. **Stop rule:** the condition under which it halts and hands back to a person, written before the first run.
 
 **Sub-agent effort is a risk setting, not a speed setting.** Cheap, easily checked work gets low effort; work whose errors propagate into routing, scoring or forecasts gets high effort and still gets review; anything that writes to the CRM or sends externally needs approval at every effort level. Effort never replaces `hitl.py`.
+
+## Earned autonomy
+
+[earned-autonomy.md](earned-autonomy.md) defines how a low-impact task moves from full review to spot-check, exceptions-only and auto, the evidence each step needs, and the triggers that demote it automatically. It never applies to actions on `always_review_actions` or above `large_deal_threshold` (decision #22). Third-party skills reviewed against this standard are listed in the [swan crosswalk](../../docs/crosswalks/swan-gtm-skills.md).
