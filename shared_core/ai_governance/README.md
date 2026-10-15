@@ -18,7 +18,7 @@ Production AI work needs four things: **production-ready** workflows; defined **
 | 2 | **Output contract** | JSON with declared keys. Anything else is rejected, never "best-effort parsed". | [`llm_client.py`](llm_client.py) `OutputContractError` |
 | 3 | **Data boundary** | Field allow-list plus PII redaction before the model sees anything | [`pii_guard.py`](pii_guard.py) |
 | 4 | **Eval set** | 5+ fixed cases with checks, run in CI on every prompt change | [`eval_harness.py`](eval_harness.py), `*/evals/*.json` |
-| 5 | **HITL policy** | Which actions auto-apply and which wait for a person | [`hitl.py`](hitl.py) |
+| 5 | **HITL policy** | Which actions auto-apply and which wait for a person. **Fail closed:** if a hook or check that guards an action fails, times out or cannot run, the action waits for a person; it never goes ahead by default. | [`hitl.py`](hitl.py) |
 | 6 | **Impact metric** | The business number the workflow should move, with a baseline captured *before* launch | Table below |
 
 ## Data security
@@ -52,9 +52,22 @@ Agent tooling now lets third-party plugins change agent behavior, installs them 
 2. **Kind:** does it add a command, or change behavior (hooks, permissions)? Behavior changes are a policy decision.
 3. **Provenance:** which marketplace and which pinned version?
 4. **Owner:** one named person reviews updates.
-5. **Stop rule:** the condition under which it halts and hands back to a person, written before the first run.
+5. **Stop rule:** the condition under which it halts and hands back to a person, written before the first run. Record two fields with it: the **notification owner** (the named person who tells affected people or teams when it stops or misbehaves) and the **time limit** for doing so. Both are set before an incident, not during one.
 
 **Sub-agent effort is a risk setting, not a speed setting.** Cheap, easily checked work gets low effort; work whose errors propagate into routing, scoring or forecasts gets high effort and still gets review; anything that writes to the CRM or sends externally needs approval at every effort level. Effort never replaces `hitl.py`.
+
+**After any agent-tool upgrade, re-test the allow rules.** Check that each allow, ask and deny rule still matches only the server or tool it names, and that a blocked action is still blocked, before relying on them. A rule that looked right can change meaning between releases: one coding-agent release (Claude Code v2.1.299) tightened how a bare server-name rule matched.
+
+### Four audit questions for any agent that can write or send
+
+Answer each in writing. "Not sure" counts as a gap to close.
+
+1. Which MCP servers can an agent reach today, and who added each one?
+2. If a check or hook fails, does the action stop or go ahead?
+3. Is there a spend cap per automation, and who is the named owner of it (the person told when it trips)?
+4. Who can join the workspace without an invite?
+
+_Notes: based on the Claude Code release notes for v2.1.295 (Oct 8, 2026) and v2.1.299 (Oct 14, 2026), Anthropic's Oct 2026 account of unintended model actions during evaluations, and Oct 2026 admin-control announcements from Salesforce, HubSpot and Clay, captured in private research notes dated 2026-10-13 and 2026-10-14. Vendor statuses are as announced (several are beta) and the controls were not tested here. The audit questions are this repo's own synthesis, not a vendor checklist._
 
 ## Earned autonomy
 
