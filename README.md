@@ -194,7 +194,7 @@ tests/                          unit tests, prompt evals, scaffold test
 
 - [`docs/overview/`](docs/overview/README.md): architecture, running the toolkit, decision log, glossary, roadmap
 - [`docs/overview/new-company-repo.md`](docs/overview/new-company-repo.md): creating a company repo from this template
-- [`docs/specs/`](docs/specs/) · [`docs/playbooks/`](docs/playbooks/) · [`docs/examples/`](docs/examples/): CRM architecture, lead management, MEDDPICC, forecasting, territory and health-scoring playbooks
+- [`docs/specs/`](docs/specs/) · [`docs/playbooks/`](docs/playbooks/) · [`docs/examples/`](docs/examples/): CRM architecture, lead management, MEDDPICC, forecasting, territory, health-scoring and take-home analysis playbooks
 - [Sales leadership reporting](gtm_strategy_ops/sales_leadership/README.md): what the VP of Sales asks and how each answer is built, plus [intake questions](gtm_strategy_ops/sales_leadership/vp-intake.md) for the first 1:1
 - [Sales planning](gtm_strategy_ops/sales_planning/README.md): capacity, quota, territory, pipeline distribution and [CRM request intake](gtm_strategy_ops/sales_planning/crm-request-intake.md)
 - [Marketing Ops](gtm_engineer/marketing_ops/README.md): who owns what between Marketing Ops and RevOps, the [campaign operations spec](gtm_engineer/marketing_ops/campaign-operations-spec.md) and the demand plan

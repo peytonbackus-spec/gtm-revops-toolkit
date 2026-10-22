@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.5.0 (unreleased)
+- Docs: new playbook [Take_Home_Analysis_Method](docs/playbooks/Take_Home_Analysis_Method.md): order of work, data-audit and time-safe-definition checks, public/private split and token-saving habits for data take-homes. Company-neutral.
 - New `gtm_strategy_ops/sales_leadership/`: VP of Sales brief (snapshot or full), rep scorecard, industry win/loss with 80% confidence ranges, stage velocity with drivers and fixes, deal board (Past due / Slipping / At risk / Stalled / Hot / On track), sales all-hands inputs (`--days 1` for "today"), VP intake questions, SQL.
 - New `gtm_strategy_ops/sales_planning/`: AE capacity and hiring plan, quota vs capacity and next year's proposal, territory carve and balance, pipeline distribution with region-aware routing priority, CRM request intake process and triage (SLA, duplicates, priority inversions).
 - New `gtm_engineer/marketing_ops/`: Marketing Ops RACI and joint cadence, campaign operations spec, channel funnel and ROI, W-shaped attribution, campaign and consent hygiene (M01–M09), demand plan by channel.
