@@ -53,7 +53,7 @@ def copy_template(dest: Path) -> None:
             f.unlink()
     # never carry a prior company config, the scaffolder, or template-only tests/docs
     for rel in ("config/company.yaml", "scripts/new_company.py", "tests/test_scaffold.py",
-                "docs/overview/new-company-repo.md"):
+                "docs/overview/new-company-repo.md", "docs/proof-of-work.md"):
         f = dest / rel
         if f.exists():
             f.unlink()

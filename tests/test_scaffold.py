@@ -26,7 +26,8 @@ def test_scaffolded_repo_does_not_carry_template_only_files():
         dest = Path(tmp) / "acme"
         subprocess.run([sys.executable, str(ROOT / "scripts" / "new_company.py"), "Acme Corp", "--dest", str(dest)],
                        check=True, capture_output=True)
-        for rel in ("scripts/new_company.py", "tests/test_scaffold.py", "docs/overview/new-company-repo.md"):
+        for rel in ("scripts/new_company.py", "tests/test_scaffold.py", "docs/overview/new-company-repo.md",
+                    "docs/proof-of-work.md"):
             assert not (dest / rel).exists(), rel
 
 
