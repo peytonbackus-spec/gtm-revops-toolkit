@@ -196,7 +196,7 @@ tests/                          unit tests, prompt evals, scaffold test
 - [`docs/overview/new-company-repo.md`](docs/overview/new-company-repo.md): creating a company repo from this template
 - [`docs/specs/`](docs/specs/) · [`docs/playbooks/`](docs/playbooks/) · [`docs/examples/`](docs/examples/): CRM architecture, lead management, MEDDPICC, forecasting, territory, health-scoring and take-home analysis playbooks
 - [`docs/proof-of-work.md`](docs/proof-of-work.md): what was built and run in prior roles, with every figure labeled est. (own estimates); expansion figures are pipeline, not revenue
-- [Agent spec templates](docs/specs/gtm-engineering/agent-specs/README.md): Mutual Action Plan, BVA, QBR prep, Expansion (whitespace), quarterly business report and Forecasting agents, each built on the AI Workflow Standard
+- [Agent spec templates](docs/specs/gtm-engineering/agent-specs/README.md): Mutual Action Plan, BVA, QBR, Expansion (whitespace), quarterly business report (trigger finder) and Forecasting agents, each built on the AI Workflow Standard
 - [Agent Eval Checklist](docs/playbooks/Agent_Eval_Checklist.md) · [Outbound Deliverability Checklist](docs/playbooks/Outbound_Deliverability_Checklist.md) · [CRM Migration Checklist](docs/playbooks/CRM_Migration_Checklist.md)
 - [Usage-to-CRM Sync Pattern](docs/specs/architecture/Usage_to_CRM_Sync_Pattern.md): warehouse or product database to CRM through an API or n8n, with field mapping, dedupe and data-quality checks
 - [Sales leadership reporting](gtm_strategy_ops/sales_leadership/README.md): what the VP of Sales asks and how each answer is built, plus [intake questions](gtm_strategy_ops/sales_leadership/vp-intake.md) for the first 1:1

@@ -23,9 +23,9 @@ One spec per agent, one shared shape. An agent drafts; a named person reviews be
 |---|---|---|---|
 | Mutual Action Plan | [mutual-action-plan-agent.md](mutual-action-plan-agent.md) | Account manager (AM) | On request |
 | BVA | [bva-agent.md](bva-agent.md) | AM | On request |
-| QBR prep | [qbr-agent.md](qbr-agent.md) | AM, customer success manager (CSM) | Before each customer QBR |
+| QBR (builds the QBR presentation) | [qbr-agent.md](qbr-agent.md) | AM, customer success manager (CSM) | Before each customer QBR |
 | Expansion (whitespace) | [expansion-whitespace-agent.md](expansion-whitespace-agent.md) | AM, CSM | Scheduled, per eligible customer |
-| Quarterly business report | [quarterly-business-report-agent.md](quarterly-business-report-agent.md) | Report owner | Quarterly |
+| Quarterly business report (trigger finder) | [quarterly-business-report-agent.md](quarterly-business-report-agent.md) | Account owners | Set per org |
 | Forecasting | [forecasting-agent.md](forecasting-agent.md) | Sales and finance leaders | Weekly |
 
 ## Shared template

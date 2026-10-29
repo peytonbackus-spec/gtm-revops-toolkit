@@ -15,7 +15,7 @@ Module: `docs`. What I built and ran at a B2B SaaS company and an acquired compa
 
 ## Executive Summary
 
-I built six AI agents for post-sale and forecasting work at a B2B SaaS company: Mutual Action Plan, BVA, QBR, Expansion (whitespace), quarterly business report and Forecasting. Used by about 21 people (est.), they cut QBR prep from 3+ hours to about 45 minutes in total (est.) and sourced about 10 expansion opportunities a quarter (est.). That figure is **pipeline, not revenue**. Reusable versions of the specs are in the [agent spec templates](specs/gtm-engineering/agent-specs/README.md).
+I built six AI agents for post-sale and forecasting work at a B2B SaaS company: Mutual Action Plan, BVA, QBR (builds the QBR presentation), Expansion (whitespace), quarterly business report (a trigger finder that watches annual reports, new hires, job postings, website visits and similar signals) and Forecasting. Used by about 21 people (est.), they cut QBR prep from 3+ hours to about 45 minutes in total (est.) and sourced about 10 expansion opportunities a quarter (est.). That figure is **pipeline, not revenue**. Reusable versions of the specs are in the [agent spec templates](specs/gtm-engineering/agent-specs/README.md).
 
 ## Agent suite (a B2B SaaS company)
 
