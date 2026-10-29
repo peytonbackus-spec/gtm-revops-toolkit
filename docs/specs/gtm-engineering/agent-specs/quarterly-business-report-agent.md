@@ -22,6 +22,16 @@ Scan the sources below for each account in scope and report the triggers worth a
 
 Scheduled per account list (`[ASSUME]` cadence), plus on request from an account owner.
 
+## Build pattern
+
+Built as a workflow in [ENRICHMENT_ORCHESTRATION] (Clay in the original build) with a series of prompts.
+
+1. **Gate on conditions.** A row runs only when its conditions are met, for example the account has been a customer for at least 6 months `[ASSUME]`.
+2. **Run the prompts in series.** Together they cover the sources above and produce the output contract above.
+3. **Designate one output for delivery.** One column is marked as the message to send to the account owner or user in Slack.
+4. **Deliver through n8n.** The workflow calls an n8n workflow over HTTP: a POST to send the designated output, and a GET where the workflow needs to read data back. n8n posts the message to Slack.
+5. **Fail closed.** If a condition, a prompt or the HTTP call fails, nothing is sent and the failure is logged for the agent owner.
+
 ## Inputs
 
 | Source | What to look for |
@@ -57,7 +67,7 @@ Every trigger carries a source URL and a date. A trigger without both is rejecte
 
 ## HITL policy
 
-The account owner reviews each trigger and decides whether to act. The agent writes nothing to [CRM] and contacts no one. If the review step cannot run, nothing is delivered.
+The account owner or user receives the designated output in Slack, reviews each trigger and decides whether to act. The agent writes nothing to [CRM] and contacts no customer or prospect. If the review step cannot run, nothing is delivered.
 
 ## Evals
 

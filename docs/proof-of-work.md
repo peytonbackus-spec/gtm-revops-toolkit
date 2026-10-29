@@ -52,6 +52,10 @@ Each user worked about 10 to 15 accounts (est.).
 | At-risk flags | n/a | 3 to 4 per quarter (est.) | 2 of the 3 resolved accounts were saved and renewed (est.) |
 | Forecast accuracy | n/a | Within +/-5% of quarter-end and year-end bookings (est.) | Weekly forecast |
 
+### Quarterly business report agent (trigger finder)
+
+A Clay workflow of chained prompts that ran only when conditions were met (for example a customer for at least 6 months). One output was designated to go to the account owner or user in Slack, delivered through n8n over HTTP (POST and GET). Template: [trigger finder](specs/gtm-engineering/agent-specs/quarterly-business-report-agent.md).
+
 ### Forecasting agent
 
 Weekly forecast across 12 models (est.): opportunity stages, verticals, revenue segments and historicals, each for new business and for all existing business, and drillable to the accounts behind it. Template: [forecasting agent](specs/gtm-engineering/agent-specs/forecasting-agent.md).
