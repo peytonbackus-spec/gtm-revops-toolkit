@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.5.0 (unreleased)
+- Docs: six agent spec templates under `docs/specs/gtm-engineering/agent-specs/` (Mutual Action Plan, BVA, QBR prep, Expansion/whitespace, quarterly business report, Forecasting); playbooks [Agent_Eval_Checklist](docs/playbooks/Agent_Eval_Checklist.md), [Outbound_Deliverability_Checklist](docs/playbooks/Outbound_Deliverability_Checklist.md) and [CRM_Migration_Checklist](docs/playbooks/CRM_Migration_Checklist.md); spec [Usage_to_CRM_Sync_Pattern](docs/specs/architecture/Usage_to_CRM_Sync_Pattern.md); [proof-of-work](docs/proof-of-work.md) with all figures labeled est. and pipeline kept apart from revenue. Company-neutral, using `[COMPANY_NAME]` and the existing variables.
 - Docs: new playbook [Take_Home_Analysis_Method](docs/playbooks/Take_Home_Analysis_Method.md): order of work, data-audit and time-safe-definition checks, public/private split and token-saving habits for data take-homes. Company-neutral.
 - New `gtm_strategy_ops/sales_leadership/`: VP of Sales brief (snapshot or full), rep scorecard, industry win/loss with 80% confidence ranges, stage velocity with drivers and fixes, deal board (Past due / Slipping / At risk / Stalled / Hot / On track), sales all-hands inputs (`--days 1` for "today"), VP intake questions, SQL.
 - New `gtm_strategy_ops/sales_planning/`: AE capacity and hiring plan, quota vs capacity and next year's proposal, territory carve and balance, pipeline distribution with region-aware routing priority, CRM request intake process and triage (SLA, duplicates, priority inversions).
