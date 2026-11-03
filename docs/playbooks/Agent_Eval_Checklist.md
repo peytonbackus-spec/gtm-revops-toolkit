@@ -6,7 +6,7 @@ tags:
   - evals
   - ai-governance
 status: active
-last_updated: 2026-10-29
+last_updated: 2026-11-03
 ---
 
 # Agent Eval Checklist
@@ -26,6 +26,8 @@ Write the right answer by hand first. Test every prompt change against those ans
 - [ ] **Data boundary.** Only allow-listed fields reach the prompt; PII is redacted first.
 - [ ] **Baseline.** The impact metric is measured before launch, so the result can be compared.
 - [ ] **Named reviewer.** Every agent has a person who reviews its output before delivery, and a named owner for the agent itself.
+- [ ] **Guard fails closed.** If a hook-based guard can be skipped or cannot run, the action is held for a person, not allowed through. Claude Code (v2.1.312) caps hooks at 24 concurrent, so a guard that is skipped under load must not read as a pass.
+- [ ] **CRM writes read the schema first.** Before an API write, read the object's required properties. A CRM API can reject writes with missing required properties (HubSpot API 2026-09), so on a 400 fix the payload; never resend it unchanged.
 
 ## On every prompt change
 
@@ -53,6 +55,10 @@ Write the right answer by hand first. Test every prompt change against those ans
 - [ ] **Apply it in the prompt,** not in a post-edit, and include profile cases in the test set.
 - [ ] **Let the reader correct it.** Rework from a person feeds back into their profile.
 - [ ] **Channel rules are contract rules.** A character limit or formatting rule belongs in the output contract and in a hard check.
+
+## Monitoring questions
+
+- [ ] **Cost per key or service account.** Can usage and cost be reported per API key or per service account, so one agent's spend is visible? (Anthropic Usage and Cost Analytics API, beta as of 2026-10-30.)
 
 ## Stop rule
 
