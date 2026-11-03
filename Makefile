@@ -1,4 +1,4 @@
-.PHONY: help data demo brief test lint webhook new
+.PHONY: help data demo brief test lint webhook new guard
 
 PY ?= python3
 
@@ -8,6 +8,7 @@ help:
 	@echo "make brief                 VP of Sales snapshot (outputs/vp_brief_snapshot.md)"
 	@echo "make test                  run the pytest suite"
 	@echo "make lint                  ruff check"
+	@echo "make guard                 repo guardrails: empty files, vault leakage, broken links, denylist"
 	@echo "make webhook               run the FastAPI enrichment webhook on :8000"
 	@echo 'make new COMPANY="Acme"    scaffold a new company repo from this template'
 	@echo '    optional: DEST=path FY_START=1-12'
@@ -60,3 +61,6 @@ webhook:
 new:
 	@test -n "$(COMPANY)" || (echo 'Usage: make new COMPANY="Acme Corp" [DEST=path] [FY_START=1-12]'; exit 1)
 	$(PY) scripts/new_company.py "$(COMPANY)" $(if $(DEST),--dest "$(DEST)") $(if $(FY_START),--fy-start-month $(FY_START)) --git
+
+guard:
+	$(PY) scripts/check_repo.py

@@ -1,0 +1,27 @@
+---
+id: skill-sales-development-strategy
+type: skill
+tags: [skill, sdr, outbound, objection-handling]
+last_modified: 2026-09-25
+---
+
+# Sales Development Strategy
+
+## Skill Tree
+- Outbound sequencing (Apollo)
+- Territory & capacity planning
+- Objection handling (data-driven, once a friction/objection dataset exists in raw-sources)
+- BDR team leadership
+
+## Prompt Templates
+**Battlecard generation:** "Turn this friction data row into a one-page objection-handling battlecard: objection -> reframe -> proof point -> CTA."
+
+## Execution Checklist — SDR Playbook Rollout
+- [ ] Objection data sourced and reviewed
+- [ ] Sequence drafted and reviewed against objection data
+- [ ] Territory/capacity model checked against rep count
+- [ ] Sequence QA'd for personalization tokens
+- [ ] Baseline reply/booked-meeting rate captured before iterating
+
+## See Also
+[Prompt Library Index](../README.md)
