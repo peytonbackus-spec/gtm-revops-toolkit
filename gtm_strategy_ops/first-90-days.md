@@ -30,6 +30,8 @@ Principle: **the forecast is the product.** Every change in days 31–90 has to 
 - **Planning for next year:** [capacity and hiring plan, quota vs capacity, territory balance](sales_planning/README.md) on real productivity and ramp history, before the planning cycle starts.
 - Day 90 readout: the accuracy baseline vs current; flag precision; manager prep time; renewal risk caught early.
 
+Templates for weeks 1-6: [operating charter](../docs/templates/RevOps_Operating_Charter.md), [definitions pack](../docs/templates/Definitions_Pack.md), [roadmap](../docs/templates/RevOps_Roadmap.md) and a [build spec](../docs/templates/Build_Spec.md) per build.
+
 ## Questions to ask in week one
 
 1. What was week-8 commit accuracy last quarter, and does anyone track it today?

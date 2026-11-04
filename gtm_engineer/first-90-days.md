@@ -4,6 +4,8 @@
 
 Principle: **measure before building.** Every change in days 31–90 has a baseline captured in days 1–30.
 
+Templates for weeks 1-6: [operating charter](../docs/templates/RevOps_Operating_Charter.md), [definitions pack](../docs/templates/Definitions_Pack.md), [roadmap](../docs/templates/RevOps_Roadmap.md) and a [build spec](../docs/templates/Build_Spec.md) per build.
+
 ## Days 1–30: Audit and baseline
 
 | Week | Focus | Output |
