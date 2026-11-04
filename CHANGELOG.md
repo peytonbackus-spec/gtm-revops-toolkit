@@ -11,6 +11,7 @@
 - Scaffold: every fiscal-quarter label in the config (quota, bookings plan, current quarter) is relabelled for the chosen fiscal calendar, not only the current quarter; new scaffold test runs the new reports on a calendar-year repo.
 - Fix: open opportunities could show a stage entry date before the opportunity existed; now clamped to the created date.
 - AI Workflow Standard: the HITL part now says to fail closed when a hook or check fails; the Stop rule carries a notification owner and time limit; added an allow-rule re-test step after any agent-tool upgrade and four audit questions (reachable MCP servers and who added them, stop on check failure, spend cap with a named owner, who can join without an invite). Decision log: entry 24.
+- AI Workflow Standard: retries of an agent's write call are limited to read-only or idempotent calls; Stop rule item 6 says a hook- or mod-rewritten input is write-capable and needs the same owner and review as the action it changes; scheduled runs must check for their own prior output so a re-run after a partial failure does not repeat it (duplicate-output check).
 
 ## 0.4.3 (unreleased)
 - Added `gtm_engineer/enrichment/precision_audit.py` (Wilson intervals, exact paired comparison, blind labeling sheet, `--demo`) with tests, plus the Vendor Benchmark Verification playbook.

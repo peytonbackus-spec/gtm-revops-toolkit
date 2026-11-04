@@ -53,10 +53,15 @@ Agent tooling now lets third-party plugins change agent behavior, installs them 
 3. **Provenance:** which marketplace and which pinned version?
 4. **Owner:** one named person reviews updates.
 5. **Stop rule:** the condition under which it halts and hands back to a person, written before the first run. Record two fields with it: the **notification owner** (the named person who tells affected people or teams when it stops or misbehaves) and the **time limit** for doing so. Both are set before an incident, not during one.
+6. **Rewritten inputs:** a hook or mod that rewrites an agent's input (a changed tool input, or a changed sub-agent prompt or model) is write-capable. Give it the same owner and review as the action it changes, and log the original and the rewritten value.
 
 **Sub-agent effort is a risk setting, not a speed setting.** Cheap, easily checked work gets low effort; work whose errors propagate into routing, scoring or forecasts gets high effort and still gets review; anything that writes to the CRM or sends externally needs approval at every effort level. Effort never replaces `hitl.py`.
 
+**Retry only idempotent calls.** When an agent's write call fails or times out, the retry is limited to calls that are read-only or idempotent (for example an upsert on an external ID). A non-idempotent write (create, send, post) waits for a person instead of retrying, because the first attempt may have succeeded. This mirrors a coding-agent release (Claude Code v2.1.307) that retries HTTP MCP tool calls only when they are read-only or idempotent.
+
 **After any agent-tool upgrade, re-test the allow rules.** Check that each allow, ask and deny rule still matches only the server or tool it names, and that a blocked action is still blocked, before relying on them. A rule that looked right can change meaning between releases: one coding-agent release (Claude Code v2.1.299) tightened how a bare server-name rule matched.
+
+**Scheduled runs must not repeat their output.** A scheduled agent that fails partway and is re-run must not post the same report, message or record twice. Before the run writes or sends, check for its own prior output for the same period (a run key or external ID), and if a partial result exists, resume or skip rather than repeat. Treat "the re-run created duplicates" as an eval case. Claude Code v2.1.302 fixed a routine-rerun bug of this kind.
 
 ### Four audit questions for any agent that can write or send
 
