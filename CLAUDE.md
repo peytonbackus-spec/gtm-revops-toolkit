@@ -8,3 +8,6 @@ Public GitHub repo (peytonbackus-spec/gtm-revops-toolkit). See README.md for pur
 - Run the tests (`make test` or `pytest`) before proposing a change as done.
 - Python venvs (`.venv/`) and `outputs/` are local and ignored; don't add them.
 - Project MCP servers live in `mcp/*/` and are wired in `.mcp.json`; if the repo path changes, update `.mcp.json` and recheck `claude mcp list`.
+- I run git myself. Every git command uses `git --no-pager`.
+- Never name companies I've applied to. Use variables or label examples "example only".
+- Never edit `~/.claude/settings.json` or any hook.
